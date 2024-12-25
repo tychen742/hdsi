@@ -1,8 +1,8 @@
 {
-    "remotePath": "/var/www/tychen/hdsi/",
-    "host": "tychen.us",
+    "remotePath": "/var/www/hdsi/",
+    "host": "tychen.org",
     "username": "tychen",
-    "password": "redcar@2019",
+    "password": "Redcar@2020",
     "port": 22,
     "secure": false,
     "protocol": "sftp",
