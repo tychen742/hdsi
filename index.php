@@ -20,7 +20,6 @@ $_SESSION['document_root'] = __DIR__;
         <!-- ##### background effect  ##### -->
         <div data-toggle="tooltip"
              data-placement="auto"
-             style="">
             <div style="text-align: left; position: absolute; top: 35px; background-color: darkgreen; opacity: .3; color: white">
                 import requests from bs4 import BeautifulSoup import pynotify from time import sleep def
                 sendmessage(title, message): pynotify.init("Test") notice = pynotify.Notification(title, message)
