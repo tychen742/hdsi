@@ -50,7 +50,6 @@ if (!isset($_SESSION['email_hbdi'])) {
 
     <!--        ##### topnav wrapper #####-->
     <div class="topnav_wrapper">
-    <!-- <div class="container-fluid" style="margin: 0 auto!important; padding: 0!important;"> -->
         <!-- ##### the Navigation Bar navbar ##### -->
         <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar_customize">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
