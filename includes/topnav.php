@@ -49,7 +49,8 @@ if (!isset($_SESSION['email_hbdi'])) {
     ?>
 
     <!--        ##### topnav wrapper #####-->
-    <div class="topnav_wrapper">
+    <!-- <div class="topnav_wrapper"> -->
+    <div class="container-fluid" style="margin: 0 auto!important; padding: 0!important;">
         <!-- ##### the Navigation Bar navbar ##### -->
         <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar_customize">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -340,7 +341,7 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
     <div class="modal-content">
         <span class="close">&times;</span>
         <div style="position: relative; display: inline-block; margin: 0 auto">
-                            <span style=" ">
+                            <span>
                             <input style="margin: 50px 25px 0 50px; width: 500px; height: 45px; padding-left: 10px; "
                                    type="text" name="search"
                                    placeholder="Search for projects, datasets, and tasks...">
@@ -350,8 +351,7 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
             <div hidden>
                 <button style="margin-top: 55px; font-weight: 500; color: #EEEEEE;
             padding: 7px 13px; border-radius: 10px; background-color: #782f40; width: 150px">
-                    <a href="#"
-                       style=""> SEARCH </a>
+                    <a href="#"> SEARCH </a>
                 </button>
             </div>
         </div>
