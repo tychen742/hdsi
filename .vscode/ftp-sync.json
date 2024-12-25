@@ -1,0 +1,29 @@
+{
+    "remotePath": "/var/www/tychen/hdsi/",
+    "host": "tychen.us",
+    "username": "tychen",
+    "password": "redcar@2019",
+    "port": 22,
+    "secure": false,
+    "protocol": "sftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store",
+        "\\.idea",
+        "/z_archive/*"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ".php, .js, .css, .html, .png, .jpg, .ico, .xml, .htaccess"
+        ],
+        "path": ""
+    }
+}

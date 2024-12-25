@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="72e932b5-052c-4325-8ca8-aa7b38536a30" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/403.php" beforeDir="false" afterPath="$PROJECT_DIR$/403.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/404.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files.php" beforeDir="false" afterPath="$PROJECT_DIR$/files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/headers.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/headers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/login_loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/login_loader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/topnav.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/topnav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/project_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/project_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/project_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/project_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/test_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/test_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/uploader/test_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/uploader/test_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/add_task.php" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/add_task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/file_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/file_menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/modals.php" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/modals.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/topnav.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/topnav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/pw_reset_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/pw_reset_process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/files.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/includes/login_loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/includes/login_loader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/includes/topnav.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/includes/topnav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/project/project_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/project/project_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/project/project_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/project/project_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/project/test_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/project/test_new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/project/uploader/test_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/project/uploader/test_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/scripts/add_task.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/scripts/add_task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/scripts/file_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/scripts/file_menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/scripts/modals.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/scripts/modals.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/tasks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/test/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/test/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/www/tychen.us/hbdi/user/pw_reset_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/www/tychen.us/hbdi/user/pw_reset_process.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/app/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/app/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2N3NS4QVfuo1hn50bPE3uauePKg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tc16k/workspaces/hdsi&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="72e932b5-052c-4325-8ca8-aa7b38536a30" name="Changes" comment="" />
+      <created>1678888801160</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678888801160</updated>
+      <workItem from="1678888802403" duration="33000" />
+      <workItem from="1689031676910" duration="14453000" />
+      <workItem from="1689095166529" duration="987000" />
+      <workItem from="1689106597610" duration="66000" />
+      <workItem from="1690397681069" duration="3157000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
