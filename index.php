@@ -3,7 +3,7 @@
 </head>
 <?php
 include_once("./includes/topnav.php");
-include_once("./includes/headers.php");
+// include_once("./includes/headers.php");
 
 ini_set("error_log", "~/php_errors.log");
 $_SESSION['document_root'] = __DIR__;
@@ -13,7 +13,7 @@ $_SESSION['document_root'] = __DIR__;
 
 <!-- ### just a white space divider ### -->
 <div style="height: 5px; width: 100%; padding: 0; margin: 0 ">&nbsp;</div>
-
+TTTTTTTTTTTTTTT
 <div class="container">
     <!-- ##### ::before for background ##### -->
     <div class="css-pain">
