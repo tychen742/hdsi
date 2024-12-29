@@ -115,11 +115,11 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <a id="navbar-brand" href="<?php echo $p; ?>"> NOLE </a>
                     </li>
                     &nbsp;
-                    <li class=" nav-item" data-toggle='modal' data-target='#signupModal'>
+                    <li class="nav-item" href="#" data-toggle='modal' data-target='#signupModal'>
                         Sign Up
                     </li>
                     &nbsp;
-                    <li class="nav-item" data-bss-toggle='modal' data-bs-target="#loginModal">
+                    <li class="nav-item" href="#" data-bss-toggle='modal' data-bs-target="#loginModal">
                         Log In 2
                     </li>
                     &nbsp;
