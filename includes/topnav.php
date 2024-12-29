@@ -1,6 +1,6 @@
 <!-- ##### tooltip initialization ##### -->
 <script>
-    $(function() {
+    $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
@@ -28,14 +28,14 @@ error_reporting(E_ALL);
 <!-- ##### Begin of Navigation Bar ##### -->
 <!-- ##### stripes on top of page ##### -->
 <div
-    style="height: 10px; background: repeating-linear-gradient(
+        style="height: 10px; background: repeating-linear-gradient(
     to right,
             #CEB888,
             #CEB888 9px,
             #782F40 10px,
             #63615d 15px,
             #FFFFFF 9px);"
-    class="module">
+        class="module">
     <div class="stripe-6">
     </div>
 </div>
@@ -47,7 +47,7 @@ error_reporting(E_ALL);
 ##### not signed in #####
 if (!isset($_SESSION['email_hbdi'])) {
     // echo "TTTTkkTTTTTT";
-?>
+    ?>
 
     <head>
         <meta charset="utf-8">
@@ -59,11 +59,12 @@ if (!isset($_SESSION['email_hbdi'])) {
     </head>
 
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade
+                                                                                                                   your
+                                                                                                                   browser</a>
+                                            to improve your experience.</p><![endif]-->
 
-        <script src="" async defer></script>
+    <script src="" async defer></script>
     </body>
 
     </html>
@@ -72,12 +73,12 @@ if (!isset($_SESSION['email_hbdi'])) {
         <!-- ##### the Navigation Bar navbar ##### -->
         <nav class="navbar sticky-top navbar-expand-md navbar-light navbar_customize">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent"
-                style="display: inline-block;">
+                 style="display: inline-block;">
 
                 <ul id="navbar-nav" class="navbar-nav mr-auto">
 
@@ -105,21 +106,22 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <a class="nav-link" style="color:#FFF;  font-size: 16px; font-weight: 600"> Home </a>
                     </li>
                     &nbsp;
-                    <div class="nav-item"> <!-- why float right???-->
-                        <a class="nav-link dropdown-toggle"
-                            data-toggle="dropdown"> Services </a>
-                        <div class="dropdown-menu" style="position: absolute; top: 80px; left: 30%">
-                            <a class="dropdown-item" href="#">Security </a> <a class="dropdown-item"
-                                href="#">Compliance </a> <a
-                                class="dropdown-item" href="#"> Citation </a> <a class="dropdown-item" href="#">
-                                Preprint </a>
+                    <li class="nav-item dropdown"> <!-- why float right???-->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="tree" aria-expanded="false"> Services </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="position: absolute; top:
+                        80px; left: 30%">
+                            <a class="dropdown-item" href="#">Security </a>
+                            <a class="dropdown-item" href="#">Compliance </a>
+                            <a class="dropdown-item" href="#">Citation </a>
+                            <a class="dropdown-item" href="#">Preprint </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Manage </a> <a class="dropdown-item"
-                                href="#">Collaborate </a> <a
-                                class="dropdown-item" href="#">Share </a> <a class="dropdown-item"
-                                href="#">Publish </a>
+                            <a class="dropdown-item" href="#">Manage </a>
+                            <a class="dropdown-item" href="#">Collaborate </a>
+                            <a class="dropdown-item" href="#">Share </a>
+                            <a class="dropdown-item" href="#">Publish </a>
                         </div>
-                    </div>
+                    </li>
                     &nbsp;
                     &nbsp;
                     <div class="navbar-brand">
@@ -136,13 +138,13 @@ if (!isset($_SESSION['email_hbdi'])) {
                     &nbsp;
                     <div class="nav-item">
                         <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"> <span
-                                class="fas fa-user-circle"> </span> </a>
+                                    class="fas fa-user-circle"> </span> </a>
                         <div class="dropdown-menu" style="position: absolute; top: 80px; left: 70%">
                             <!--                                                        <a class="dropdown-item" href="" data-toggle='modal' data-target='#loginModal'> Log in </a>-->
                             <!--                                                        <a class="dropdown-item" href="" data-toggle='modal' data-target="#signupModal">Sign up</a>-->
                             <a class="dropdown-item" href=""
-                                data-toggle='modal'
-                                data-target='#resetPwModal'> Reset password </a>
+                               data-toggle='modal'
+                               data-target='#resetPwModal'> Reset password </a>
                         </div>
                     </div>
 
@@ -165,16 +167,16 @@ if (!isset($_SESSION['email_hbdi'])) {
     <!-- ##### PHP-message ##### -->
 
 
-<?php
+    <?php
     ##### End of Not Signed In
     ##### show normal navbar if logged in-->
 } else {
-?>
+    ?>
     <!-- ##### wrapper ##### -->
     <div class="topnav_wrapper" style="margin: 0 auto!important">
         <!-- ##### navbar after logged in ##### -->
         <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar_customize"
-            style="width: 100%; max-width: 1300px;">
+             style="width: 100%; max-width: 1300px;">
             <!--        <nav class="navbar sticky-top navbar-expand-sm" style="width: 100%; max-width: 1300px;">-->
 
             <!-- ##### Logo and Brand ##### -->
@@ -182,12 +184,12 @@ if (!isset($_SESSION['email_hbdi'])) {
             <div class="navbar-brand" style="padding: 2px 0 0 10px;">
                 <div class="nav-item" style="margin-right: 0">
                     <img class="d-inline-block align-middle" style="display: inline-block; padding-bottom: 1px;"
-                        src="https://hdsinet.us/images/favicon_io/apple-touch-icon.png"
-                        width="25" height="25" alt="HDSI logo">
+                         src="https://hdsinet.us/images/favicon_io/apple-touch-icon.png"
+                         width="25" height="25" alt="HDSI logo">
                 </div>
                 <div style="display: inline-block; font-size: 1.25em">
                     <a href="<?php echo $p; ?>"> NOLE </a> <a href="<?php echo $p; ?>"> HBDI </a> <i
-                        class="fas fa-ellipsis-v" style="color: #CEB888"></i> <a href="<?php echo $p; ?>"> FSU </a>
+                            class="fas fa-ellipsis-v" style="color: #CEB888"></i> <a href="<?php echo $p; ?>"> FSU </a>
                 </div>
             </div>
 
@@ -239,8 +241,8 @@ if (!isset($_SESSION['email_hbdi'])) {
                     </div>
                     <div class="nav-item dropdown" href="">
                         <a class="nav-link dropdown-toggle"
-                            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"> Projects </a>
+                           id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false"> Projects </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <?php
                             $result = $pdo->query("
@@ -261,12 +263,12 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
 
                                     //                                        if (file_exists("/var/www/tychen.us/hbdi/projects/$username_hbdi/$title_project_short.php")) {
                                     //                                            
-                            ?>
+                                    ?>
                                     <a class="dropdown-item"
-                                        href="<?php echo $p ?>/projects/<?php echo $username_hbdi_project . "/" . $title_project_short ?>.php">
+                                       href="<?php echo $p ?>/projects/<?php echo $username_hbdi_project . "/" . $title_project_short ?>.php">
                                         <?php echo $title_project_short; ?>
                                     </a>
-                            <?php
+                                    <?php
                                     //                                        }
                                 }
                             }
@@ -278,7 +280,7 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
                         <a href="<?php echo $p ?>/files.php"> Files </a>
                     </div>
                     <!--        <a href="--><?php //echo $p 
-                                            ?><!--/documents.php"> Documents </a>-->
+                    ?><!--/documents.php"> Documents </a>-->
 
                     <div class="nav-item nav-link">
                         <a href="<?php echo $p ?>/tasks.php"> Tasks </a>
@@ -286,34 +288,34 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
 
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href=""
-                            id="" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"> Resources </a>
+                           id="" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false"> Resources </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" target='_blank'
-                                href="">Your VM</a> <a class="dropdown-item" target='_blank'
-                                href="https://its.fsu.edu/services/it-professional-services/myfsuvlab">Virtual lab</a> <a class="dropdown-item"
-                                target='_blank'
-                                href="https://acct.rcc.fsu.edu/submit-script-generator">
-                                Slurm
-                                HPC</a>
+                               href="">Your VM</a> <a class="dropdown-item" target='_blank'
+                                                      href="https://its.fsu.edu/services/it-professional-services/myfsuvlab">Virtual
+                                                                                                                             lab</a>
+                            <a class="dropdown-item"
+                               target='_blank'
+                               href="https://acct.rcc.fsu.edu/submit-script-generator"> Slurm HPC</a>
 
                             <div class="dropdown-divider"></div>
 
                             <a class="dropdown-item" target='_blank'
-                                href="">HIPAA clearance</a> <a class="dropdown-item" target='_blank'
-                                href="">IRB certification</a>
+                               href="">HIPAA clearance</a> <a class="dropdown-item" target='_blank'
+                                                              href="">IRB certification</a>
 
                             <div class="dropdown-divider"></div>
 
                             <a class="dropdown-item" target="_blank"
-                                href="https://dataverse.org/best-practices/academic-credit"> Data citation format </a>
+                               href="https://dataverse.org/best-practices/academic-credit"> Data citation format </a>
                         </div>
                     </div>
 
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href=""
-                            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
+                           id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
                             <?php
                             if (isset($email_hbdi) && isset($uid_hbdi)) {
                                 $name_first = $pdo->query("SELECT name_first FROM user WHERE email = '$email_hbdi'")->fetch();
@@ -325,11 +327,11 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <!--                        TODO: profile page -->
                                 <a class="dropdown-item" href="#"> Profile </a> <a class="dropdown-item" href=""
-                                    data-toggle='modal'
-                                    data-target='#resetPwModal'> Reset
-                                    password</a>
+                                                                                   data-toggle='modal'
+                                                                                   data-target='#resetPwModal'> Reset
+                                                                                                                password</a>
                                 <a class="dropdown-item" href="" data-toggle="modal"
-                                    data-target="#logoutModal"> Logout </a>
+                                   data-target="#logoutModal"> Logout </a>
                         </a>
                     </div>
                 </div>
@@ -350,7 +352,7 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
         <div class='loader'></div>
     </div>
     <!-- ##### ##### -->
-<?php
+    <?php
 }
 ?>
 <!-- ##### end of topnav PHP ##### -->
@@ -363,10 +365,10 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
         <div style="position: relative; display: inline-block; margin: 0 auto">
             <span>
                 <input style="margin: 50px 25px 0 50px; width: 500px; height: 45px; padding-left: 10px; "
-                    type="text" name="search"
-                    placeholder="Search for projects, datasets, and tasks...">
+                       type="text" name="search"
+                       placeholder="Search for projects, datasets, and tasks...">
                 <span><i style="padding-left: 5px; "
-                        class="fas fa-search"> </i></a></span>
+                         class="fas fa-search"> </i></a></span>
             </span>
             <div hidden>
                 <button style="margin-top: 55px; font-weight: 500; color: #EEEEEE;
@@ -394,7 +396,7 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
         } else { // code for IE6, IE5
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xmlhttp.onreadystatechange = function() {
+        xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
 
                 document.getElementById("livesearch").innerHTML = this.responseText;
