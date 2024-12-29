@@ -159,8 +159,8 @@ $root_path = '/var/www/hdsi';
             </span>
         </div>
         <div class="modal-body">
-
-            <!-- <form>
+            
+            <form>
                 <div class="mb-3">
                     <!--                        <label>Email address</label>-->
                     <label for="recipient-email" class="col-form-label">email</label> <input type="text"
@@ -177,11 +177,11 @@ $root_path = '/var/www/hdsi';
                         id="recipient-password">
                     <!--                            <input type="password" placeholder="password" name="password" class="form-control">-->
                 </div>
-            </form> -->
+            </form>
         </div>
 
         <div class="modal-footer">
-            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
             <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
                 data-bs-target="#loginModal" name="submitLogIn"> Log In</button>
@@ -195,12 +195,13 @@ $root_path = '/var/www/hdsi';
                 Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
                     data-target="#resetPwModal"
                     data-dismiss="modal"> Reset Password </span>
-            </div> -->
+            </div>
         </div>
 
     </div>
     <!-- end of class: model content        -->
 </div>
+
 <!-- ##### End of Login Modal ##### -->
 <!-- ##### Login Processing for Login Modal ##### -->
 <?php
