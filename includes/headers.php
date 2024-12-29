@@ -18,7 +18,7 @@ if ($server_name == 'hdsinet.us') {
 
 <!DOCTYPE html>
 <html>
-    echo "TTTTTTESTTTTTTTTTTTT";
+    "TTTTTTESTTTTTTTTTTTT";
 
 <head>
 
