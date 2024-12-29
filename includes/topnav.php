@@ -1,10 +1,7 @@
-
 <!-- ##### includes INCLUDES ##### -->
 <?php
 include_once('headers.php');
 include_once('utilities.php');
-include_once("/var/www/hdsi/scripts/modals.php");
-
 
 if (isset($_SESSION['uid_hbdi'])) {
     $uid_hbdi = $_SESSION['uid_hbdi'];
@@ -107,7 +104,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                     </li>
                     &nbsp;
                     <li class="nav-item" data-toggle='modal' data-target="#loginModal">
-                        Log In 1
+                        Log In 2
                     </li>
                     &nbsp;
                     <li class="nav-item dropdown">
@@ -116,9 +113,10 @@ if (!isset($_SESSION['email_hbdi'])) {
                                     class="fas fa-user-circle"> </span> </a>
                         <div class="dropdown-menu" aria-labelledby="navUserDropdown" style="position: absolute; top:
                         80px; left: 70%">
-                            <a class="dropdown-item" href="" data-toggle='modal' data-target='#loginModal'> Log in 2
-                            </a>
-                            <a class="dropdown-item" href="" data-toggle='modal' data-target="#signupModal">Sign up</a>
+                            <a class="dropdown-item" href="" data-toggle='modal' data-target='#loginModal'> Log in
+                                                                                                            3 </a> <a
+                                    class="dropdown-item" href="" data-toggle='modal' data-target="#signupModal">Sign
+                                                                                                                 up</a>
                             <a class="dropdown-item" href="" data-toggle='modal' data-target='#resetPwModal'> Reset
                                                                                                               password </a>
                         </div>
@@ -193,7 +191,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <!--                            </a>-->
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <div><a class="dropdown-item" href="" data-toggle='modal'
-                                    data-target='#loginModal'> Log in 3 </a></div>
+                                    data-target='#loginModal'> Log in 1 </a></div>
                             <div><a class="dropdown-item" href="" data-toggle='modal'
                                     data-target="#signupModal">Sign up</a>
                             </div>
@@ -392,9 +390,62 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
 
 <?php
 unset($id_project);
+include_once("/var/www/hdsi/scripts/modals.php");
 ?>
 
 <!-- ##### bootstrap JS bundle-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+</script>
+
+<!-- ##### Log In Login Modal ##### -->
+<!-- TODOO: solved. it's requiring double log-in to log into the system. Why??? -->
+<div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog role=" document">
+
+    <div class="modal-content">
+
+        <form name="form" method="post" action="">
+            <div class="modal-header">
+                <div class="modal-title"> Log In</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <!--                        <label>Email address</label>-->
+                    <input type="text" placeholder="email" name="email" class="form-control">
+                    <!--                        <small class="form-text text-muted"> We keep your information private. </small>-->
+                </div>
+
+                <div class="form-group">
+                    <!--                        <label>Password</label>-->
+                    <input type="password" placeholder="password" name="password" class="form-control">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn" type="submit" name="submitLogIn"> Log In
+                </button>
+
+                <button class="btn" data-toggle="modal" type="button" data-dismiss="modal"
+                        data-target="#signupModal" name="submitSignUp" style="width: auto; background-color: #915664"
+                        value=""> Sign Up
+                </button>
+                <div>
+                    Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal" data-target="#resetPwModal"
+                                                data-dismiss="modal"> Reset Password </span>
+                </div>
+            </div>
+
+        </form>
+    </div>
+                                            <!-- end of class: model content        -->
+</div>
+
+<!-- ##### End of Login Modal ##### -->
+<!-- ##### Login Processing for Login Modal ##### -->
+
