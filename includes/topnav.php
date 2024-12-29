@@ -54,18 +54,10 @@ if (!isset($_SESSION['email_hbdi'])) {
 
             <div class="collapse navbar-collapse" id="topNav"
                 <!-- style="display: inline-block;" -->
-                >
 
                 <ul id="navbar-nav" class="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <!-- ##### the social media icons, the Brand, and the menu items ##### -->
-                    <!--                    <div-->
-                    <!--                            style="-->
-                    <!--                        /*float: left;*/-->
-                    <!--                        /*display: inline-block;*/-->
-
-                    <!--                        /*border: 2px solid pink*/-->
-                    <!--">-->
                     <li class="nav-item " style="padding-left: 15px;">
                         <div style="color: white; text-align: left; font-size: 20px; ">
                             <a><i class="fab fa-facebook"></i></a> &nbsp;
