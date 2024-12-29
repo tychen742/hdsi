@@ -25,7 +25,7 @@ if (!isset($_SESSION['email_hbdi']) or
     !isset($_SESSION['uid_hbdi'])) {
 
 // ##### do not redirect if index.php or account_verify.php
-    if (($this_page != '/hdsi/index.php') && ($this_page != '/hbdi/user/account_verify.php')) {
+    if (($this_page != '/hdsi/index.php') && ($this_page != '/hdsi/user/account_verify.php')) {
         echo '
         <script type="text/javascript"> showMessage("You are not logged in. <br> Redirecting to HDSI Home..."); </script>
         ';
@@ -44,7 +44,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
     session_unset();     // unset $_SESSION variable for the run-time
     session_destroy();   // destroy session data in storage
     echo "<script> alert(' This session was disconnected after being idle for 15 minutes. '); 
-let url= 'https://tychen.us/hbdi/'; 
+let url= 'https://hdsinet.us/'; 
     window.location = url;
 </script>";
 } else {
