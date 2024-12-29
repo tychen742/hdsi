@@ -160,7 +160,7 @@ $root_path = '/var/www/hdsi';
         </div>
         <div class="modal-body">
 
-            <form>
+            <!-- <form>
                 <div class="mb-3">
                     <!--                        <label>Email address</label>-->
                     <label for="recipient-email" class="col-form-label">email</label> <input type="text"
@@ -177,7 +177,7 @@ $root_path = '/var/www/hdsi';
                         id="recipient-password">
                     <!--                            <input type="password" placeholder="password" name="password" class="form-control">-->
                 </div>
-            </form>
+            </form> -->
         </div>
 
         <div class="modal-footer">
