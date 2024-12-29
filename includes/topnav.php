@@ -1,11 +1,3 @@
-<!-- ##### tooltip initialization ##### -->
-<script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
-<!-- ##### end of tooltip initialization ##### -->
-
 
 <!-- ##### includes INCLUDES ##### -->
 <?php

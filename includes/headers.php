@@ -23,7 +23,7 @@ if ($server_name == 'hdsinet.us') {
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=no">
 
     <title>
         HDSI@FSU
