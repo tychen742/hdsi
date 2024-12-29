@@ -149,173 +149,174 @@ $root_path = '/var/www/hdsi';
 <!-- TODOO: solved. it's requiring double log-in to log into the system. Why??? -->
 <div class="modal fade" id="loginModal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <!-- <div class="modal-dialog"> -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-header">
-                    <div class="modal-title"> Log In</div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <!--                        <label>Email address</label>-->
-                        <label for="recipient-email" class="col-form-label">email</label> <input type="text"
-                            class="form-control"
-                            id="recipient-email"
-                            placeholder="email"
-                            name="email">
-                        <!--                        <small class="form-text text-muted"> We keep your information private. </small>-->
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="recipient-password" class="col-form-label">Password</label> <input type="text"
-                            class="form-control"
-                            id="recipient-password">
-                        <!--                            <input type="password" placeholder="password" name="password" class="form-control">-->
-                    </div>
-                </form>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                    data-bs-target="#loginModal" name="submitLogIn"> Log In</button>
-
-                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                    data-bs-target="#signupModal" name="submitSignUp"
-                    style="width: auto; background-color: #915664"
-                    value=""> Sign Up
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"> Log In</h4>
+            <span>
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
                 </button>
-                <div>
-                    Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
-                        data-target="#resetPwModal"
-                        data-dismiss="modal"> Reset Password </span>
-                </div>
-            </div>
-
+            </span>
         </div>
-        <!-- end of class: model content        -->
+        <div class="modal-body">
+
+            <form>
+                <div class="mb-3">
+                    <!--                        <label>Email address</label>-->
+                    <label for="recipient-email" class="col-form-label">email</label> <input type="text"
+                        class="form-control"
+                        id="recipient-email"
+                        placeholder="email"
+                        name="email">
+                    <!--                        <small class="form-text text-muted"> We keep your information private. </small>-->
+                </div>
+
+                <div class="mb-3">
+                    <label for="recipient-password" class="col-form-label">Password</label> <input type="text"
+                        class="form-control"
+                        id="recipient-password">
+                    <!--                            <input type="password" placeholder="password" name="password" class="form-control">-->
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                data-bs-target="#loginModal" name="submitLogIn"> Log In</button>
+
+            <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                data-bs-target="#signupModal" name="submitSignUp"
+                style="width: auto; background-color: #915664"
+                value=""> Sign Up
+            </button>
+            <div>
+                Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
+                    data-target="#resetPwModal"
+                    data-dismiss="modal"> Reset Password </span>
+            </div>
+        </div>
+
     </div>
+    <!-- end of class: model content        -->
+</div>
 
-    <!-- ##### End of Login Modal ##### -->
-    <!-- ##### Login Processing for Login Modal ##### -->
-    <?php
-    //error_log("Before login processing @topnav.php", 0);
+<!-- ##### End of Login Modal ##### -->
+<!-- ##### Login Processing for Login Modal ##### -->
+<?php
+//error_log("Before login processing @topnav.php", 0);
 
 
-    if (isset($_POST['submitLogIn'])) {
-        error_log("Login submitted @topnav.php... ", 0);
+if (isset($_POST['submitLogIn'])) {
+    error_log("Login submitted @topnav.php... ", 0);
 
-        // ##### save POSTed email and password to variables #####
-        if (isset($_POST['email'])) {
-            $email_posted = $_POST['email'];
-            error_log('email posted to @topnav.php for login modal processing', 0);
-        } else {
-            error_log('email not posted to @topnav.php for login modal processing', 0);
-        }
-        if (isset($_POST['password'])) {
-            $password_posted = $_POST['password'];
-            //        error_log("password posted to @topnav.php for login modal processing: $password_posted", 0);
-            error_log("password posted to @topnav.php for login modal processing", 0);
-        } else {
-            error_log("password not posted to @topnav.php for login modal processing", 0);
-        }
-        //        $password = password_hash($password, PASSWORD_DEFAULT);
+    // ##### save POSTed email and password to variables #####
+    if (isset($_POST['email'])) {
+        $email_posted = $_POST['email'];
+        error_log('email posted to @topnav.php for login modal processing', 0);
+    } else {
+        error_log('email not posted to @topnav.php for login modal processing', 0);
+    }
+    if (isset($_POST['password'])) {
+        $password_posted = $_POST['password'];
+        //        error_log("password posted to @topnav.php for login modal processing: $password_posted", 0);
+        error_log("password posted to @topnav.php for login modal processing", 0);
+    } else {
+        error_log("password not posted to @topnav.php for login modal processing", 0);
+    }
+    //        $password = password_hash($password, PASSWORD_DEFAULT);
 
-        // ##### get User info and check account Activation from DB.user #####
-        // $stmt = $pdo->prepare("SELECT password, email, username, id_user, time_verified FROM user WHERE email = '$email_posted' ");
-        $stmt = $pdo->prepare("SELECT password, email, username, id_user FROM user WHERE email = '$email_posted' ");
-        $stmt->execute();
-        $result = $stmt->fetch();
-        if ($result) {
-            error_log('query ran successfully @topnav.php', 0);
-            $password_from_db = $result['password'];
-            $email_from_db = $result['email'];
-            $user_time_verified = $result['time_verified'];
+    // ##### get User info and check account Activation from DB.user #####
+    // $stmt = $pdo->prepare("SELECT password, email, username, id_user, time_verified FROM user WHERE email = '$email_posted' ");
+    $stmt = $pdo->prepare("SELECT password, email, username, id_user FROM user WHERE email = '$email_posted' ");
+    $stmt->execute();
+    $result = $stmt->fetch();
+    if ($result) {
+        error_log('query ran successfully @topnav.php', 0);
+        $password_from_db = $result['password'];
+        $email_from_db = $result['email'];
+        $user_time_verified = $result['time_verified'];
 
-            // ##### check Account Activation #####
-            if ($user_time_verified) {
-                // ##### verify password #####
-                $isValid = password_verify($password_posted, $password_from_db);
-                if ($isValid) {
-                    // ##### Create SESSIONS ##### //{
-                    error_log("Password is a match", 0);
-                    $_SESSION['email_hbdi'] = $result['email'];
-                    $_SESSION['username_hbdi'] = $result['username'];
-                    $_SESSION['uid_hbdi'] = $result['id_user'];
-                    error_log("Sessions created @ topnav.php ");
+        // ##### check Account Activation #####
+        if ($user_time_verified) {
+            // ##### verify password #####
+            $isValid = password_verify($password_posted, $password_from_db);
+            if ($isValid) {
+                // ##### Create SESSIONS ##### //{
+                error_log("Password is a match", 0);
+                $_SESSION['email_hbdi'] = $result['email'];
+                $_SESSION['username_hbdi'] = $result['username'];
+                $_SESSION['uid_hbdi'] = $result['id_user'];
+                error_log("Sessions created @ topnav.php ");
 
-                    // TODO: what is this?
-                    $uid_hdsi = $_SESSION['uid_hbdi'] = $result['id_user'];
-                    //                $time_login = time();
-                    //                $datetime_login = date('Y-m-d H:i:s', $time_login);
+                // TODO: what is this?
+                $uid_hdsi = $_SESSION['uid_hbdi'] = $result['id_user'];
+                //                $time_login = time();
+                //                $datetime_login = date('Y-m-d H:i:s', $time_login);
 
-                    // ##### get and insert HTTP_USER_AGENT
-                    $http_user_agent = $_SERVER['HTTP_USER_AGENT'];
-                    $result = $pdo->query(" SELECT id_user, http_user_agent FROM location WHERE http_user_agent = '$http_user_agent'")->fetchAll();
+                // ##### get and insert HTTP_USER_AGENT
+                $http_user_agent = $_SERVER['HTTP_USER_AGENT'];
+                $result = $pdo->query(" SELECT id_user, http_user_agent FROM location WHERE http_user_agent = '$http_user_agent'")->fetchAll();
 
-                    $location_exist = false;
-                    foreach ($result as $record) {
-                        if (($record['id_user'] == $uid_hdsi) && ($record['http_user_agent'] == $http_user_agent)) {
-                            $location_exist = true;
-                        }
+                $location_exist = false;
+                foreach ($result as $record) {
+                    if (($record['id_user'] == $uid_hdsi) && ($record['http_user_agent'] == $http_user_agent)) {
+                        $location_exist = true;
                     }
+                }
 
-                    if (($location_exist != true)) {
-                        $msg = " This a new device/browser for this account. Saving as new location...";
-                        echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
-                        error_log("echo \"<script> setTimeout(showMessage(' $msg '), 5000); </script>\"", 0);
-                        // TODO: create a modal for user to agree to register this device.
-
-                        $ip = new Get_IP_Address();
-                        $ip_address = $ip->getRealIpAddr();
-
-                        $stmt = $pdo->prepare(" INSERT INTO location (id_user, ip_address, http_user_agent) VALUES (?, ?, ?) ");
-                        $stmt->execute([$uid_hdsi, $ip_address, $http_user_agent]);
-                    } else {
-                        $msg = " This device/browser for this account has been verified. ";
-                        echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
-                    }
-                    // ##### end of get and insert HTTP_USER_AGENT
-
-                    // ##### login record in transaction_store records #####
-                    //                $time_login = date('Y-m-d H:i:s', time());
+                if (($location_exist != true)) {
+                    $msg = " This a new device/browser for this account. Saving as new location...";
+                    echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
+                    error_log("echo \"<script> setTimeout(showMessage(' $msg '), 5000); </script>\"", 0);
+                    // TODO: create a modal for user to agree to register this device.
 
                     $ip = new Get_IP_Address();
                     $ip_address = $ip->getRealIpAddr();
 
-                    $stmt = $pdo->prepare(" INSERT INTO transaction_store (id_user, ip_address, login) VALUES (?, ?, ?) ");
-                    $stmt->execute([$uid_hdsi, $ip_address, 1]);
-                    echo '<script> showMessage("Login successful. <br> Redirecting to your Dashboard..."); </script>';
-                    echo "<meta http-equiv=REFRESH CONTENT=2;url=$p/dashboard.php>";
-                    unset($_POST['submitLogIn']);
-                    exit;
+                    $stmt = $pdo->prepare(" INSERT INTO location (id_user, ip_address, http_user_agent) VALUES (?, ?, ?) ");
+                    $stmt->execute([$uid_hdsi, $ip_address, $http_user_agent]);
                 } else {
-                    echo '<script> showMessage("Password is incorrect. <br> Redirecting to HBDI Home..."); </script>';
-                    error_log('password INCorrect (topnav.php)', 0);
-                    echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
-                    exit;
+                    $msg = " This device/browser for this account has been verified. ";
+                    echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
                 }
+                // ##### end of get and insert HTTP_USER_AGENT
+
+                // ##### login record in transaction_store records #####
+                //                $time_login = date('Y-m-d H:i:s', time());
+
+                $ip = new Get_IP_Address();
+                $ip_address = $ip->getRealIpAddr();
+
+                $stmt = $pdo->prepare(" INSERT INTO transaction_store (id_user, ip_address, login) VALUES (?, ?, ?) ");
+                $stmt->execute([$uid_hdsi, $ip_address, 1]);
+                echo '<script> showMessage("Login successful. <br> Redirecting to your Dashboard..."); </script>';
+                echo "<meta http-equiv=REFRESH CONTENT=2;url=$p/dashboard.php>";
+                unset($_POST['submitLogIn']);
+                exit;
             } else {
-                // ##### your account is not activated.
-                echo '<script> showMessage("Your account is not activated. <br> Please check your account creation confirmation email to activate. <br> Redirecting to HBDI Home in 5 seconds..."); </script>';
-                error_log('Account not activated @topnav.php', 0);
+                echo '<script> showMessage("Password is incorrect. <br> Redirecting to HBDI Home..."); </script>';
+                error_log('password INCorrect (topnav.php)', 0);
                 echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
                 exit;
             }
         } else {
-            // ##### problem with DB
-            error_log('query NOT run successfully @topnav.php', 0);
-            echo "<script> showMessage('Email or password information incorrect. Please try again.<br> Contact Support if problem persists. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
-            echo "<meta http-equiv=REFRESH CONTENT=3;url=$p/index.php>";
+            // ##### your account is not activated.
+            echo '<script> showMessage("Your account is not activated. <br> Please check your account creation confirmation email to activate. <br> Redirecting to HBDI Home in 5 seconds..."); </script>';
+            error_log('Account not activated @topnav.php', 0);
+            echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
             exit;
         }
+    } else {
+        // ##### problem with DB
+        error_log('query NOT run successfully @topnav.php', 0);
+        echo "<script> showMessage('Email or password information incorrect. Please try again.<br> Contact Support if problem persists. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
+        echo "<meta http-equiv=REFRESH CONTENT=3;url=$p/index.php>";
+        exit;
     }
-    ?>
+}
+?>
 </div>
 <!-- ##### end of log in login processing ##### -->
 
