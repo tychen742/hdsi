@@ -107,46 +107,46 @@ if (!isset($_SESSION['email_hbdi'])) {
                     </li>
                     &nbsp;
                     <li class="nav-item dropdown"> <!-- why float right???-->
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="navServiceDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="tree" aria-expanded="false"> Services </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="position: absolute; top:
+                        <div class="dropdown-menu" aria-labelledby="navServiceDropdown" style="position: absolute; top:
                         80px; left: 30%">
-                            <a class="dropdown-item" href="#">Security </a>
-                            <a class="dropdown-item" href="#">Compliance </a>
-                            <a class="dropdown-item" href="#">Citation </a>
-                            <a class="dropdown-item" href="#">Preprint </a>
+                            <a class="dropdown-item" href="#">Security </a> <a class="dropdown-item"
+                                                                               href="#">Compliance </a> <a
+                                    class="dropdown-item" href="#">Citation </a> <a class="dropdown-item" href="#">Preprint </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Manage </a>
-                            <a class="dropdown-item" href="#">Collaborate </a>
-                            <a class="dropdown-item" href="#">Share </a>
-                            <a class="dropdown-item" href="#">Publish </a>
+                            <a class="dropdown-item" href="#">Manage </a> <a class="dropdown-item"
+                                                                             href="#">Collaborate </a> <a
+                                    class="dropdown-item" href="#">Share </a> <a class="dropdown-item"
+                                                                                 href="#">Publish </a>
                         </div>
                     </li>
                     &nbsp;
                     &nbsp;
-                    <div class="navbar-brand">
+                    <li class="navbar-brand">
                         <a id="navbar-brand" href="<?php echo $p; ?>"> NOLE </a>
-                    </div>
+                    </li>
                     &nbsp;
-                    <div class=" nav-item" data-toggle='modal' data-target='#signupModal'>
+                    <li class=" nav-item" data-toggle='modal' data-target='#signupModal'>
                         Sign Up
-                    </div>
+                    </li>
                     &nbsp;
-                    <div class="nav-item" data-toggle='modal' data-target="#loginModal">
+                    <li class="nav-item" data-toggle='modal' data-target="#loginModal">
                         Log In
-                    </div>
+                    </li>
                     &nbsp;
-                    <div class="nav-item">
-                        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"> <span
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navUserDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span
                                     class="fas fa-user-circle"> </span> </a>
-                        <div class="dropdown-menu" style="position: absolute; top: 80px; left: 70%">
-                            <!--                                                        <a class="dropdown-item" href="" data-toggle='modal' data-target='#loginModal'> Log in </a>-->
-                            <!--                                                        <a class="dropdown-item" href="" data-toggle='modal' data-target="#signupModal">Sign up</a>-->
-                            <a class="dropdown-item" href=""
-                               data-toggle='modal'
-                               data-target='#resetPwModal'> Reset password </a>
+                        <div class="dropdown-menu" aria-labelledby="navUserDropdown" style="position: absolute; top:
+                        80px; left: 70%">
+                            <a class="dropdown-item" href="" data-toggle='modal' data-target='#loginModal'> Log in </a>
+                            <a class="dropdown-item" href="" data-toggle='modal' data-target="#signupModal">Sign up</a>
+                            <a class="dropdown-item" href="" data-toggle='modal' data-target='#resetPwModal'> Reset
+                                                                                                              password </a>
                         </div>
-                    </div>
+                    </li>
 
                     &nbsp;
 
@@ -420,4 +420,6 @@ include_once("/var/www/hdsi/scripts/modals.php");
 ?>
 
 <!-- ##### bootstrap JS bundle-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
