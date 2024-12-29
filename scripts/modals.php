@@ -13,7 +13,7 @@ $root_path = '/var/www/hdsi';
     <div class="modal-dialog">
         <div class="modal-content">
             <form id="formFileUpload" method="POST" action="https://tychen.us/hbdi/scripts/file_menu.php"
-                  enctype="multipart/form-data">
+                enctype="multipart/form-data">
                 <div class="modal-header">
                     <!--                    <h4 class="modal-title">Add Files </h4>-->
                     <h4 class="modal-title"> Upload Files </h4>
@@ -26,7 +26,7 @@ $root_path = '/var/www/hdsi';
 
                     <div>
                         <input type="checkbox" id="check_HIPAA" onclick="msgHIPAA();" name="compliance[]"
-                               value="HIPAA" id="HIPAA"> File contains HIPAA data
+                            value="HIPAA" id="HIPAA"> File contains HIPAA data
                         <div style="display: none" class="msg_HIPAA">
                             <i class="fas fa-check"></i> &nbsp; User HIPAA clearance verified
                         </div>
@@ -36,45 +36,45 @@ $root_path = '/var/www/hdsi';
                     </div>
 
                     <div><input type="checkbox" name="compliance[]"
-                                id="Human_Subject" value="Human_Subject"> File contains Human Subject data
+                            id="Human_Subject" value="Human_Subject"> File contains Human Subject data
                     </div>
                     <div><input type="checkbox" name="compliance[]"
-                                value="FDA-part11" FDA-part11"> File contains FDA - part 11 data
+                            value="FDA-part11" FDA-part11"> File contains FDA - part 11 data
                     </div>
                     <div><input type="checkbox" name="compliance[]"
-                                value="compliance_other" style="color: grey"> Other
+                            value="compliance_other" style="color: grey"> Other
                     </div>
 
                     <hr data-content="AND" class="hr-text" style="position: relative; width: 250px">
 
                     <div>
                         <input type="checkbox" id="check_FSU_protected" onclick="msgFSUProtected()" name="compliance[]"
-                               value="FSU_protected" id="FSU_protected"> File contains FSU protected data
+                            value="FSU_protected" id="FSU_protected"> File contains FSU protected data
                         <div style="display: none" class="msg_FSU_protected">
                             <i class="fas fa-check"></i> &nbsp; <a
-                                    href="https://its.fsu.edu/ispo/policy/information-privacy">FSU protected data</a>
-                                                         will be accessed by authorized users only.
+                                href="https://its.fsu.edu/ispo/policy/information-privacy">FSU protected data</a>
+                            will be accessed by authorized users only.
                         </div>
                     </div>
                     <div><input type="checkbox" name="compliance[]"
-                                value="FSU_private" id="FSU_private"> File contains FSU private data
+                            value="FSU_private" id="FSU_private"> File contains FSU private data
                     </div>
                     <div><input type="checkbox" name="compliance[]"
-                                value="FSU_public" id="FSU_public"> File contains FSU public data
+                            value="FSU_public" id="FSU_public"> File contains FSU public data
                     </div>
 
                     <hr data-content="AND" class="hr-text" style="position: relative; width: 250px">
 
                     <div><input type="checkbox" name="compliance[]"
-                                value="dataset" id="dataset" style="color: grey"> Dataset (structured, semi-structured,
-                                                                                  text...)
+                            value="dataset" id="dataset" style="color: grey"> Dataset (structured, semi-structured,
+                        text...)
                     </div>
                     <div><input type="checkbox" name="compliance[]"
-                                value="document" id="document" style="color: grey"> Document (draft, manuscript,
-                                                                                    preprint...)
+                            value="document" id="document" style="color: grey"> Document (draft, manuscript,
+                        preprint...)
                     </div>
                     <div><input type="checkbox" name="compliance[]"
-                                value="file_other" style="color: grey"> Other
+                            value="file_other" style="color: grey"> Other
                     </div>
 
                     <hr data-content="AND" class="hr-text" style="position: relative; width: 250px">
@@ -82,10 +82,10 @@ $root_path = '/var/www/hdsi';
 
                     <?php
                     if (isset($id_project)) {
-                        ?>
+                    ?>
                         <div style="padding-left: 20px">
                             <select class="content-item" name="title_project_short" id='title_project_short'
-                                    style="width: 50%;" required="required">
+                                style="width: 50%;" required="required">
                                 <option selected="selected" disabled hidden> Project</option>
                                 <?php
                                 $projects = $pdo->query(" SELECT DISTINCT id_project FROM project_user WHERE id_user = '$uid_hdsi' ")->fetchAll();
@@ -99,17 +99,18 @@ $root_path = '/var/www/hdsi';
                             </select>
                         </div>
                         <div><br></div>
-                        <?php
+                    <?php
                     }
                     /*unset($id_project);*/
                     ?>
 
-                    <!-- <input type="hidden" name="title_project_short" id="title_project_short" value="<?php //echo $title_project_short; ?>"> -->
+                    <!-- <input type="hidden" name="title_project_short" id="title_project_short" value="<?php //echo $title_project_short; 
+                                                                                                            ?>"> -->
                     <input type="hidden" name="username_hbdi" id="username_hbdi" value="<?php echo $username_hbdi; ?>">
                 </div>
                 <div class="modal-footer">
                     <input class="btn" name="submitFileUpload" id="submitFileUpload" value="SEND" data-dismiss="modal"
-                           style="width: 95px; height: ; margin: 10px 20px; padding: 2px 5px" onclick="form_submit()">
+                        style="width: 95px; height: ; margin: 10px 20px; padding: 2px 5px" onclick="form_submit()">
                 </div>
             </form>
         </div>
@@ -162,17 +163,17 @@ $root_path = '/var/www/hdsi';
                     <div class="mb-3">
                         <!--                        <label>Email address</label>-->
                         <label for="recipient-email" class="col-form-label">email</label> <input type="text"
-                                                                                                 class="form-control"
-                                                                                                 id="recipient-email"
-                                                                                                 placeholder="email"
-                                                                                                 name="email">
+                            class="form-control"
+                            id="recipient-email"
+                            placeholder="email"
+                            name="email">
                         <!--                        <small class="form-text text-muted"> We keep your information private. </small>-->
                     </div>
 
                     <div class="mb-3">
                         <label for="recipient-password" class="col-form-label">Password</label> <input type="text"
-                                                                                                       class="form-control"
-                                                                                                       id="recipient-password">
+                            class="form-control"
+                            id="recipient-password">
                         <!--                            <input type="password" placeholder="password" name="password" class="form-control">-->
                     </div>
                 </form>
@@ -181,17 +182,18 @@ $root_path = '/var/www/hdsi';
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
-                <button class="btn" type="button" name="submitLogIn"> Log In</button>
+                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                    data-bs-target="loginModal" name="submitLogIn"> Log In</button>
 
                 <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                        data-target="#signupModal" name="submitSignUp"
-                        style="width: auto; background-color: #915664"
-                        value=""> Sign Up
+                    data-bs-target="#signupModal" name="submitSignUp"
+                    style="width: auto; background-color: #915664"
+                    value=""> Sign Up
                 </button>
                 <div>
                     Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
-                                                data-target="#resetPwModal"
-                                                data-dismiss="modal"> Reset Password </span>
+                        data-target="#resetPwModal"
+                        data-dismiss="modal"> Reset Password </span>
                 </div>
             </div>
 
@@ -217,14 +219,14 @@ $root_path = '/var/www/hdsi';
         }
         if (isset($_POST['password'])) {
             $password_posted = $_POST['password'];
-//        error_log("password posted to @topnav.php for login modal processing: $password_posted", 0);
+            //        error_log("password posted to @topnav.php for login modal processing: $password_posted", 0);
             error_log("password posted to @topnav.php for login modal processing", 0);
         } else {
             error_log("password not posted to @topnav.php for login modal processing", 0);
         }
-//        $password = password_hash($password, PASSWORD_DEFAULT);
+        //        $password = password_hash($password, PASSWORD_DEFAULT);
 
-// ##### get User info and check account Activation from DB.user #####
+        // ##### get User info and check account Activation from DB.user #####
         // $stmt = $pdo->prepare("SELECT password, email, username, id_user, time_verified FROM user WHERE email = '$email_posted' ");
         $stmt = $pdo->prepare("SELECT password, email, username, id_user FROM user WHERE email = '$email_posted' ");
         $stmt->execute();
@@ -249,10 +251,10 @@ $root_path = '/var/www/hdsi';
 
                     // TODO: what is this?
                     $uid_hdsi = $_SESSION['uid_hbdi'] = $result['id_user'];
-//                $time_login = time();
-//                $datetime_login = date('Y-m-d H:i:s', $time_login);
+                    //                $time_login = time();
+                    //                $datetime_login = date('Y-m-d H:i:s', $time_login);
 
-// ##### get and insert HTTP_USER_AGENT
+                    // ##### get and insert HTTP_USER_AGENT
                     $http_user_agent = $_SERVER['HTTP_USER_AGENT'];
                     $result = $pdo->query(" SELECT id_user, http_user_agent FROM location WHERE http_user_agent = '$http_user_agent'")->fetchAll();
 
@@ -267,7 +269,7 @@ $root_path = '/var/www/hdsi';
                         $msg = " This a new device/browser for this account. Saving as new location...";
                         echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
                         error_log("echo \"<script> setTimeout(showMessage(' $msg '), 5000); </script>\"", 0);
-// TODO: create a modal for user to agree to register this device.
+                        // TODO: create a modal for user to agree to register this device.
 
                         $ip = new Get_IP_Address();
                         $ip_address = $ip->getRealIpAddr();
@@ -281,7 +283,7 @@ $root_path = '/var/www/hdsi';
                     // ##### end of get and insert HTTP_USER_AGENT
 
                     // ##### login record in transaction_store records #####
-//                $time_login = date('Y-m-d H:i:s', time());
+                    //                $time_login = date('Y-m-d H:i:s', time());
 
                     $ip = new Get_IP_Address();
                     $ip_address = $ip->getRealIpAddr();
@@ -418,17 +420,17 @@ $root_path = '/var/www/hdsi';
                 <div class="modal-header">
                     <h4 class="modal-title"> Sign Up </h4>
                     <span>
-                    <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                    </button>
-                </span>
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                    </span>
                 </div>
                 <div class="modal-body">
 
                     <div class="form-group">
                         <input type="text" name="name_first" id="name_first"
-                               placeholder="First Name"
-                               class="form-control">
+                            placeholder="First Name"
+                            class="form-control">
                         <div>
                             <div id="name_first_error" class="signUpError"></div>
                         </div>
@@ -436,8 +438,8 @@ $root_path = '/var/www/hdsi';
 
                     <div class="form-group">
                         <input type="text" name="name_last" id="name_last"
-                               placeholder="Last Name"
-                               class="form-control">
+                            placeholder="Last Name"
+                            class="form-control">
                         <div>
                             <div id="name_last_error" class="signUpError"></div>
                         </div>
@@ -445,35 +447,35 @@ $root_path = '/var/www/hdsi';
 
                     <div class="form-group">
                         <input type="text" name="username" id="username"
-                               placeholder="Username"
-                               class="form-control">
+                            placeholder="Username"
+                            class="form-control">
                         <div><span id="username_error" class="signUpError"></span></div>
                     </div>
 
                     <div class="form-group">
                         <input type="text" name="email" id="email"
-                               placeholder="Email address"
-                               class="form-control">
+                            placeholder="Email address"
+                            class="form-control">
                         <div><span id="email_error" class="signUpError"></span></div>
                     </div>
 
                     <div class="form-group">
                         <input type="text" name="password1" id="password1"
-                               placeholder="Password"
-                               class="form-control">
+                            placeholder="Password"
+                            class="form-control">
                         <div><span id="password1_error" class="signUpError"></span></div>
                     </div>
 
                     <div class="form-group">
                         <input type="text" name="password2" id="password2"
-                               placeholder="Password again" class="form-control">
+                            placeholder="Password again" class="form-control">
                         <div><span id="password2_error" class="signUpError"></span></div>
                         <div><span id="password_match_error" class="signUpError"></span></div>
                     </div>
 
                     <div class="form-group">
                         <input class="form-control" type="text" name="affiliation" id="affiliation"
-                               placeholder="Affiliation">
+                            placeholder="Affiliation">
                         <div>
                             <span id="affiliation_error" class="signUpError"> </span>
                         </div>
@@ -481,18 +483,18 @@ $root_path = '/var/www/hdsi';
                 </div>
                 <div class="modal-footer">
                     <button type="submit" name="submitSignUp" id="submitSingUp" style="color: white"
-                            class="btn"
-                            value="sign up"> Sign Up
+                        class="btn"
+                        value="sign up"> Sign Up
                     </button>
                     <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
-                            data-target="#loginModal"
-                            data-dismiss="modal"> log in
+                        data-target="#loginModal"
+                        data-dismiss="modal"> log in
                     </button>
 
                     <div>
                         Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
-                                                    data-target="#resetPwModal"
-                                                    data-dismiss="modal"> Reset Password </span>
+                            data-target="#resetPwModal"
+                            data-dismiss="modal"> Reset Password </span>
                     </div>
                 </div>
             </form>
@@ -509,20 +511,20 @@ if (isset($_POST['submitSignUp'])) {  //  working.
     error_log("signUp POSTed @topnav signUp modal", 0);
     $name_first = $name_last = $username = $email = $password1 = $password2 = $affiliation = "";
 
-//    function test_input($data) // needed before called
-//    {
-//        $data = trim($data);
-//        $data = stripslashes($data);
-//        $data = htmlspecialchars($data);
-//        return $data;
-//    }
-//    $name_first = test_input($_POST['name_first']);
-//    $name_last = test_input($_POST['name_last']);
-//    $username = test_input($_POST['username']);
-//    $email = test_input($_POST['email']);
-//    $pwd1 = $_POST['password1'];
-//    $pwd2 = $_POST["password2"];
-//    $affiliation = test_input($_POST['affiliation']);
+    //    function test_input($data) // needed before called
+    //    {
+    //        $data = trim($data);
+    //        $data = stripslashes($data);
+    //        $data = htmlspecialchars($data);
+    //        return $data;
+    //    }
+    //    $name_first = test_input($_POST['name_first']);
+    //    $name_last = test_input($_POST['name_last']);
+    //    $username = test_input($_POST['username']);
+    //    $email = test_input($_POST['email']);
+    //    $pwd1 = $_POST['password1'];
+    //    $pwd2 = $_POST["password2"];
+    //    $affiliation = test_input($_POST['affiliation']);
 
     $name_first = $_POST['name_first'];
     $name_last = $_POST['name_last'];
@@ -532,21 +534,21 @@ if (isset($_POST['submitSignUp'])) {  //  working.
     $pwd2 = $_POST["password2"];
     $affiliation = $_POST['affiliation'];
 
-// https://www.w3schools.com/php/php_form_required.asp
+    // https://www.w3schools.com/php/php_form_required.asp
 
-//    if (!preg_match("/^[\w-.]+$/", $name_first)) {
-//        echo "<div class='php-message'> Only letters are allowed in First Name. </div><br>";
-//    } elseif (!preg_match("/^[\w-.]+$/", $name_last)) {
-//        echo "<div class='php-message'> Only letters are allowed in Last Name. </div><br>";
-//    } elseif (!preg_match("/^[\w-.]+$/", $username)) {
-//        echo "<div class='php-message'> Only letters and numbers are allowed in User Name. </div><br>";
-//    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-//        echo "<div class='php-message'> Email ($email) format incorrect. </div><br>";
-//    } elseif (!preg_match("/^[\w-.]+$/", $affiliation)) {
-//        echo "<div class='php-message'> Affiliation: Please use only alphanumerical characters ($affiliation). </div><br>";
-//        error_log("There's an error with your input. ", 0);
-//        exit();
-//    } else {
+    //    if (!preg_match("/^[\w-.]+$/", $name_first)) {
+    //        echo "<div class='php-message'> Only letters are allowed in First Name. </div><br>";
+    //    } elseif (!preg_match("/^[\w-.]+$/", $name_last)) {
+    //        echo "<div class='php-message'> Only letters are allowed in Last Name. </div><br>";
+    //    } elseif (!preg_match("/^[\w-.]+$/", $username)) {
+    //        echo "<div class='php-message'> Only letters and numbers are allowed in User Name. </div><br>";
+    //    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    //        echo "<div class='php-message'> Email ($email) format incorrect. </div><br>";
+    //    } elseif (!preg_match("/^[\w-.]+$/", $affiliation)) {
+    //        echo "<div class='php-message'> Affiliation: Please use only alphanumerical characters ($affiliation). </div><br>";
+    //        error_log("There's an error with your input. ", 0);
+    //        exit();
+    //    } else {
 
     // ### password hash
     $pass_hash = password_hash($pwd1, PASSWORD_DEFAULT);
@@ -554,7 +556,7 @@ if (isset($_POST['submitSignUp'])) {  //  working.
     $account_verify_token = substr("abcdefghijklmnopqrstuvwxyz", mt_rand(0, 25), 1) . substr(md5(time()), 1);
 
     // ### check email availability
-//    TODO: move this to the signUp form in signUp modal using AJAX to check email availability
+    //    TODO: move this to the signUp form in signUp modal using AJAX to check email availability
     // TODO: account needs to be confirmed within one hour of registration or the link will become invalid.
     $result = $pdo->query("SELECT email, username FROM user WHERE email = '$email' ")->fetch();
     $email_db = $result['email'];
@@ -576,7 +578,7 @@ if (isset($_POST['submitSignUp'])) {  //  working.
             echo "<script> showMessage('Recording user data and generating verification email...'); </script>";
 
             $user_time_registered = date('Y-m-d H:i:s', time());
-//            keep registered instead of changing to signup because of the tense.
+            //            keep registered instead of changing to signup because of the tense.
 
             $sql = "INSERT INTO user (email, password, username, name_first, name_last, affiliation, account_verify_token, time_registered ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
@@ -591,7 +593,7 @@ if (isset($_POST['submitSignUp'])) {  //  working.
                 $headers .= 'From: support@hbdi<support@hbdi.fsu.edu>' . "\r\n";
                 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-// ### the message ###
+                // ### the message ###
                 $msg = "
 ***** DO NOT reply to this email. ***** <br>
 This is an automatically generated email. Contact the Support Team through the website for support. <br><br>
@@ -602,25 +604,24 @@ to the address bar of your browser and hit enter to process your HBDI sign-up:<b
 $p/user/account_verify.php?key=$email&verify=$account_verify_token
 ";
 
-// ### use wordwrap() if lines are longer than 70 characters
+                // ### use wordwrap() if lines are longer than 70 characters
                 $msg = wordwrap($msg, 70);
-// ### send email
+                // ### send email
                 mail("$email", "HBDI: Account Creation Verification", "$msg", "$headers");
-// ### message user
+                // ### message user
 
                 echo "<script> showMessage('A verification email from support@hbdi is sent to $email. <br> Use the email to verify your account creation. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
                 echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
                 exit();
-// ### send email exception
-            } catch
-            (Exception $emailException) {
+                // ### send email exception
+            } catch (Exception $emailException) {
                 echo $emailException;
             }
 
             echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
             error_log("the web path here is: $p", 0);
             exit();
-// ### insert user account information exception
+            // ### insert user account information exception
         } catch (PDOException $e) {
             echo "<script> 
 showMessage('Something went wrong and your account was not created. Please try again. The error message is: <br> + $e->getMessage(). <br> Contact the support team if the issue persists. ');
@@ -628,13 +629,13 @@ showMessage('Something went wrong and your account was not created. Please try a
             echo "<meta http-equiv=REFRESH CONTENT=10;url=$p>";
             exit();
         }
-//    }
-//        }
-//    } catch (Exception $e) {
-//        echo "error!";
-//        echo $e->getMessage();
+        //    }
+        //        }
+        //    } catch (Exception $e) {
+        //        echo "error!";
+        //        echo $e->getMessage();
     }
-//    }
+    //    }
 }
 ?>
 <!-- ##### END of SIgn up SignUp Modal PHP Processing ##### -->
@@ -648,10 +649,10 @@ showMessage('Something went wrong and your account was not created. Please try a
                 <div class="modal-header">
                     <h4 class="modal-title"> Log Out </h4>
                     <span>
-                    <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                    </button>
-                </span>
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                    </span>
                 </div>
 
                 <div class="modal-body">
@@ -663,10 +664,10 @@ showMessage('Something went wrong and your account was not created. Please try a
                 </div>
                 <div class="modal-footer">
                     <button class="btn" type="submit" name="submitLogOut"
-                            value=""> Log Out
+                        value=""> Log Out
                     </button>
                     <button class="btn" data-dismiss="modal"
-                            value="" style="background-color: #915664"> cancel
+                        value="" style="background-color: #915664"> cancel
                     </button>
                 </div>
             </form>
@@ -680,21 +681,21 @@ showMessage('Something went wrong and your account was not created. Please try a
 
 
 if (isset($_POST['submitLogOut'])) {
-//    $time_logout = time();
-//    $time_logout = date('Y-m-d H:i:s', $time_logout);
+    //    $time_logout = time();
+    //    $time_logout = date('Y-m-d H:i:s', $time_logout);
 
     $ip = new Get_IP_Address();
     $ip_address = $ip->getRealIpAddr();
     $stmt = $pdo->prepare(" INSERT INTO transaction_store (id_user, ip_address, logout) VALUES (?, ?, ?) ");
     $stmt->execute([$uid_hbdi, $ip_address, 1]);
-// TODO: logout should not clear current content. Login does not. Why?
+    // TODO: logout should not clear current content. Login does not. Why?
 
-// ### message ###
+    // ### message ###
     $msg = "Logout successful. <br> Redirecting to HBDI Home...";
     echo "<script> showMessage('$msg'); </script>";
 
-// ### redirect & Exit ###
-//<!-- ########### clear sessions ############ -->
+    // ### redirect & Exit ###
+    //<!-- ########### clear sessions ############ -->
     session_destroy();
     echo "<meta http-equiv=REFRESH CONTENT=1;url=$p/index.php>";
     exit;
@@ -709,20 +710,20 @@ if (isset($_POST['submitLogOut'])) {
         <!-- Modal content-->
         <div class="modal-content">
             <form enctype="multipart/form-data" method="POST"
-                  onsubmit="return validate();">
+                onsubmit="return validate();">
                 <div class="modal-header">
                     <h4 class="modal-title"> Reset Password </h4>
                     <span>
-                    <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                    </button>
-                </span>
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                    </span>
                 </div>
                 <div class="modal-body">
                     <div>
                         <input type="text" name="username"
-                               placeholder="Username"
-                               class="form-control">
+                            placeholder="Username"
+                            class="form-control">
                         <div><span id="username_error"></span></div>
                     </div>
                     <div style="height: 20px; color: #818181;
@@ -731,7 +732,7 @@ if (isset($_POST['submitLogOut'])) {
                     </div>
 
                     <input type="text" name="email" placeholder="Email address" class="form-control"
-                           style="margin-top: 0">
+                        style="margin-top: 0">
                     <div><span id="email_error"></span></div>
 
                     <br>
@@ -739,21 +740,21 @@ if (isset($_POST['submitLogOut'])) {
                 </div>
                 <div class="modal-footer">
                     <button type="submit" name="submitResetPw" id="submit"
-                            class="btn"
-                            value=""> Reset
+                        class="btn"
+                        value=""> Reset
                     </button>
 
                     <button class="btn" style="background-color:#915664;" data-toggle="modal"
-                            data-target="#loginModal"
-                            data-dismiss="modal"> log in
+                        data-target="#loginModal"
+                        data-dismiss="modal"> log in
                     </button>
 
                     <div><br></div>
                     <div style="display: block">
                         <div></div>
                         Don't have an account? &nbsp;<a style="color: #915664; font-weight: 500" data-toggle="modal"
-                                                        data-target="#signupModal"
-                                                        data-dismiss="modal"> Sign Up </a>
+                            data-target="#signupModal"
+                            data-dismiss="modal"> Sign Up </a>
                     </div>
                 </div>
             </form>
@@ -785,7 +786,7 @@ if (isset($_POST['submitResetPw'])) {
         $email = test_input($email);
     }
 
-//    check DB
+    //    check DB
     $stmt = $pdo->prepare("SELECT email, username FROM user WHERE email = '$email' ");
     $stmt->execute();
     $result = $stmt->fetch();
@@ -793,10 +794,10 @@ if (isset($_POST['submitResetPw'])) {
     $username_db = $result['username'];
     if ($email == $email_db) {
 
-//        generate a toekn
+        //        generate a toekn
         $token = substr("abcdefghijklmnopqrstuvwxyz", mt_rand(0, 25), 1) . substr(md5(time()), 1);
         $pass_hash = password_hash("$token", PASSWORD_DEFAULT);
-/// save token to mysql (UPDATE to replace passwd)
+        /// save token to mysql (UPDATE to replace passwd)
         $sql = " UPDATE user SET account_verify_token = '$pass_hash' WHERE email = '$email_db' ";
         $stmt = $pdo->prepare($sql);
         $true_false = $stmt->execute();
@@ -805,15 +806,15 @@ if (isset($_POST['submitResetPw'])) {
         }
 
         /// send email with token link
-/// http://talkerscode.com/webtricks/password-reset-system-using-php.php
-// the headers: https://stackoverflow.com/questions/28026932/php-warning-mail-sendmail-from-not-set-in-php-ini-or-custom-from-head
+        /// http://talkerscode.com/webtricks/password-reset-system-using-php.php
+        // the headers: https://stackoverflow.com/questions/28026932/php-warning-mail-sendmail-from-not-set-in-php-ini-or-custom-from-head
         $link = "<a href='$p/user/pw_reset_process.php?key=" . $email_db . "&reset=" . $pass_hash . "'> Click to reset password</a>";
         try {
             $headers = 'MIME-Version: 1.0' . "\r\n";
             $headers .= 'From: admin@hbdi<admin@hbdi.fsu.edu>' . "\r\n";
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-// the message
+            // the message
             $msg = "
                 DO NOT reply to this email. Contact the website administrator for support or questions. <br><br>
                 Please click on the link to reset your password: $link. <br><br>
@@ -823,11 +824,11 @@ if (isset($_POST['submitResetPw'])) {
                    $p/user/pw_reset_process.php?key=$email_db&reset=$pass_hash
                     ";
 
-// use wordwrap() if lines are longer than 70 characters
+            // use wordwrap() if lines are longer than 70 characters
             $msg = wordwrap($msg, 70);
-// send email
+            // send email
             mail("$email_db", "HBDI: Reset Password", "$msg", "$headers");
-// message user
+            // message user
             $msg = "
             <div id='php-message'> Hi, $username_db, <br>
                 Reset email sent by admin@hbdi (admin@hbdi.fsu.edu) to $email_db. <br>
@@ -867,74 +868,72 @@ if (isset($_POST['submitResetPw'])) {
                         <!--                        <div class="modal-header">-->
 
                         <input placeholder="Project title... (128 characters maximum)"
-                               type="text" name="title_project"
-                               class="form-control" required>
+                            type="text" name="title_project"
+                            class="form-control" required>
                         <!--                        </div>/**/-->
                     </div>
 
                     <div class="form-group">
                         <input placeholder="Short title... (10 characters maximum)"
-                               type="text"
-                               name="title_project_short"
-                               class="form-control" required>
+                            type="text"
+                            name="title_project_short"
+                            class="form-control" required>
                     </div>
 
                     <div class="form-group">
                         <label style="margin: 15px 0 0 0; color: dimgrey">Granted By:</label><br>
                         <div style="padding-left: 15px; color: dimgrey">
                             <div class="box-checkbox"><input type="checkbox" class="form-check-input" id="nih"
-                                                             name="granted_by[]" value="NIH"> NIH
+                                    name="granted_by[]" value="NIH"> NIH
                             </div>
                             <div class="box-checkbox"><input type="checkbox" class="form-check-input"
-                                                             name="granted_by[]" value="HHS"> HHS
+                                    name="granted_by[]" value="HHS"> HHS
                             </div>
                             <div class="box-checkbox"><input type="checkbox" class="form-check-input"
-                                                             name="granted_by[]" value="NSF"> NSF
+                                    name="granted_by[]" value="NSF"> NSF
                             </div>
                             <div class="box-checkbox"><input type="checkbox" class="form-check-input"
-                                                             name="granted_by[]" value="FDA"> FDA
+                                    name="granted_by[]" value="FDA"> FDA
                             </div>
                             <div class="box-checkbox"><input type="checkbox" class="form-check-input"
-                                                             name="granted_by[]" value="FSU"> FSU
+                                    name="granted_by[]" value="FSU"> FSU
                             </div>
                             <div class="box-checkbox"><input type="checkbox" class="form-check-input"
-                                                             name="granted_by[]" value=""> Other
+                                    name="granted_by[]" value=""> Other
                             </div>
                         </div>
 
                         <input placeholder="Grant number..." name="grant_number" class="input_field"
-                               style="display: none; margin-top: 0">
+                            style="display: none; margin-top: 0">
                     </div>
 
                     <div class="form-group">
                         <label style="color: darkgrey; margin: 15px 0 0 0; width: 50%"> Project begins on date </label>
                         <input
-                                type="date" name="date_begin" min="2015-01-01"
-                                max="2050-12-31" class="input_field" style="margin: 0; color: dimgrey; ; width: 45%"
-                                required>
+                            type="date" name="date_begin" min="2015-01-01"
+                            max="2050-12-31" class="input_field" style="margin: 0; color: dimgrey; ; width: 45%"
+                            required>
                     </div>
 
                     <div class="form-group">
                         <label style="color: darkgrey; margin: 3px 0 0 0; width: 50% "> Project ends on date: </label>
                         <input
-                                type="date" name="date_to_complete" min="2015-01-01"
-                                max="2050-12-31" class="input_field"
-                                style="margin: 0 0 15px; color: dimgrey; width: 45%"
-                                required>
+                            type="date" name="date_to_complete" min="2015-01-01"
+                            max="2050-12-31" class="input_field"
+                            style="margin: 0 0 15px; color: dimgrey; width: 45%"
+                            required>
                     </div>
 
                     <input name="id_user" value="<?php echo $uid_hdsi; ?>" hidden>
                     <!--                    <input name="id_project" value="-->
-                    <?php //echo $id_project; ?><!--" hidden>-->
+                    <?php //echo $id_project; 
+                    ?><!--" hidden>-->
                     <input name="token_id_project_creation" value="<?php echo $uid_hdsi . '_' . time(); ?>" hidden>
                     <input class="btn" type="submit" name="submitNewProject"
-                           value="Create">
+                        value="Create">
                 </form>
             </div>
         </div>
     </div>
 </div>
 <!-- ##### end of create new project modal #####   -->
-
-
-
