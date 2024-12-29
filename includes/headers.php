@@ -18,7 +18,6 @@ if ($server_name == 'hdsinet.us') {
 
 <!DOCTYPE html>
 <html>
-    "TTTTTTESTTTTTTTTTTTT";
 
 <head>
 
@@ -90,4 +89,6 @@ if ($server_name == 'hdsinet.us') {
     <link rel="icon" href="https://hdsinet.us/favicon.ico">
 
 </head>
+
+"TTTTTTESTTTTTTTTTTTT";
 <dody>
