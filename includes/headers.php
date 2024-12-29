@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 include_once('headers.php');
-include_once('db_conn.php');
+// include_once('db_conn.php');
 //include_once('login_loader.php');
 $server_name = $_SERVER['SERVER_NAME'];
 if ($server_name == 'hdsinet.us') {
