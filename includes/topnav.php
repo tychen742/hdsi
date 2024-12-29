@@ -86,8 +86,8 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <a class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false"> Services
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navServiceDropdown" style="position: absolute; top:
-                        80px; left: 30%">
+                        <!-- style="position: absolute; top: 80px; left: 30%" -->
+                        <ul class="dropdown-menu" aria-labelledby="navServiceDropdown">
                             <li>
                                 <a class="dropdown-item" href="#">Security </a>
                             </li>
