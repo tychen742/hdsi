@@ -387,16 +387,16 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
 <!-- TODO: add a cookie here and after 3 logins, get rid of the login message when the user is familiar with the flow ???  -->
 <!-- ### end of message ### -->
 
+<!-- ##### bootstrap JS bundle-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+</script>
 
 <?php
 unset($id_project);
 include_once("/var/www/hdsi/scripts/modals.php");
 ?>
 
-<!-- ##### bootstrap JS bundle-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous">
-</script>
 
 
