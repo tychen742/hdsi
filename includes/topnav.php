@@ -46,7 +46,7 @@ error_reporting(E_ALL);
 
 ##### not signed in #####
 if (!isset($_SESSION['email_hbdi'])) {
-    echo "TTTTTTTTTT";
+    echo "TTTTkkTTTTTT";
 ?>
 
     <head>
