@@ -2,7 +2,7 @@
 <!-- ##### includes INCLUDES ##### -->
 <?php
 include_once('headers.php');
-include_once('/var/www/hdsi/includes/utilities.php');
+include_once('utilities.php');
 
 if (isset($_SESSION['uid_hbdi'])) {
     $uid_hbdi = $_SESSION['uid_hbdi'];

@@ -33,7 +33,6 @@ if ($server_name == 'hdsinet.us') {
     <!--     ##### site CSS ##### -->
     <link rel="stylesheet" type="text/css" href="<?php echo $p; ?>/styles/main.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $p; ?>/styles/landing_page.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $p; ?>/styles/topnav.css">
     <!--    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
 
     <!--    ##### site JS ##### -->
