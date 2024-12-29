@@ -103,7 +103,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         Sign Up
                     </li>
                     &nbsp;
-                    <li class="nav-item" data-toggle='modal' data-target="#loginModal">
+                    <li class="nav-item" data-bss-toggle='modal' data-bs-target="#loginModal">
                         Log In 2
                     </li>
                     &nbsp;
