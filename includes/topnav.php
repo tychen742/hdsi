@@ -115,7 +115,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <a id="navbar-brand" href="<?php echo $p; ?>"> NOLE </a>
                     </li>
                     &nbsp;
-                    <li class="nav-item" href="#" data-toggle='modal' data-target='#signupModal'>
+                    <li class="nav-item" href="#" data-bs-toggle='modal' data-bs-target='#signupModal'>
                         Sign Up
                     </li>
                     &nbsp;
@@ -132,32 +132,29 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <!-- style="position: absolute; top: 80px; left: 70%" -->
                         <ul class="dropdown-menu" aria-labelledby="navUserDropdown">
                             <li>
-                                <a class="dropdown-item" href="#" data-bs-toggle='modal' data-target='#loginModal'>
+                                <a class="dropdown-item" data-bs-toggle='modal' data-bs-target='#loginModal'>
                                     Log in 3
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#" data-bs-toggle='modal' data-target="#signupModal">
+                                <a class="dropdown-item" data-bs-toggle='modal' data-bs-target="#signupModal">
                                     Sign up
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#" data-bs-toggle='modal' data-target='#resetPwModal'> Reset
+                                <a class="dropdown-item" data-bs-toggle='modal' data-bs-target='#resetPwModal'> Reset
                                     password </a>
                             </li>
+                        </ul>
+                    </li>
             </div>
-            </li>
+
 
             &nbsp;
 
-            <!--                    <li class="nav-item"-->
-            <!--                        style="float: right; padding-right: 15px ">-->
-            <!--                        <i class=" fas fa-search" style="font-size: 1.2em"></i>-->
-            <!--                    </li>-->
-            </ul>
-    </div>
-    </nav>
-    <!-- #### end of Nav class=navbar ##### -->
+
+        </nav>
+        <!-- #### end of Nav class=navbar ##### -->
     </div>
     <!-- end of ##### inside wrapper ##### -->
 
@@ -212,18 +209,18 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <!--                            <a class="nav-link dropdown-toggle"-->
                         <!--                               href=""-->
                         <!--                               id="navbarDropdownMenuLink"-->
-                        <!--                               role="button" data-toggle="dropdown" aria-haspopup="true"-->
+                        <!--                               role="button" data-bs-toggle="dropdown" aria-haspopup="true"-->
                         <!--                               aria-expanded="false"> <i class="fas fa-user-circle"></i>-->
                         <!--                            </a>-->
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <div><a class="dropdown-item" href="" data-toggle='modal'
-                                    data-target='#loginModal'> Log in 1 </a></div>
-                            <div><a class="dropdown-item" href="" data-toggle='modal'
-                                    data-target="#signupModal">Sign up</a>
+                            <div><a class="dropdown-item" href="" data-bs-toggle='modal'
+                                    data-bs-target='#loginModal'> Log in 1 </a></div>
+                            <div><a class="dropdown-item" href="" data-bs-toggle='modal'
+                                    data-bs-target="#signupModal">Sign up</a>
                             </div>
                             <div><a class="dropdown-item" href=""
-                                    data-toggle='modal'
-                                    data-target='#resetPwModal'> Reset password </a></div>
+                                    data-bs-toggle='modal'
+                                    data-bs-target='#resetPwModal'> Reset password </a></div>
                         </div>
                     </div>
                     <!--                    </div>-->
@@ -241,7 +238,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                     </div>
                     <div class="nav-item dropdown" href="">
                         <a class="nav-link dropdown-toggle"
-                            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"> Projects </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <?php
@@ -288,7 +285,7 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
 
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href=""
-                            id="" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            id="" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"> Resources </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" target='_blank'
@@ -314,7 +311,7 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
 
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href=""
-                            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <?php
                             if (isset($email_hbdi) && isset($uid_hbdi)) {
@@ -327,11 +324,11 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <!--                        TODO: profile page -->
                                 <a class="dropdown-item" href="#"> Profile </a> <a class="dropdown-item" href=""
-                                    data-toggle='modal'
-                                    data-target='#resetPwModal'> Reset
+                                    data-bs-toggle='modal'
+                                    data-bs-target='#resetPwModal'> Reset
                                     password</a>
-                                <a class="dropdown-item" href="" data-toggle="modal"
-                                    data-target="#logoutModal"> Logout </a>
+                                <a class="dropdown-item" href="" data-bs-toggle="modal"
+                                    data-bs-target="#logoutModal"> Logout </a>
                         </a>
                     </div>
                 </div>
