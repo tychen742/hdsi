@@ -190,7 +190,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <!--                            </a>-->
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <div><a class="dropdown-item" href="" data-toggle='modal'
-                                    data-target='#loginModal'> Log in </a></div>
+                                    data-target='#loginModal'> Log ining </a></div>
                             <div><a class="dropdown-item" href="" data-toggle='modal'
                                     data-target="#signupModal">Sign up</a>
                             </div>
