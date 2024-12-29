@@ -9,6 +9,7 @@ $server_name = $_SERVER['SERVER_NAME'];
 if ($server_name == 'hdsinet.us') {
     $path = '/var/www/hdsi';
     $p = 'https://hdsinet.us/';
+    echo $path;
 } else {
     $path = 'localhost';
     //    $p = 'http://192.168.60.107';
