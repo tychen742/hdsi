@@ -107,7 +107,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                     </li>
                     &nbsp;
                     <li class="nav-item" data-toggle='modal' data-target="#loginModal">
-                        Log In 2
+                        Log In 1
                     </li>
                     &nbsp;
                     <li class="nav-item dropdown">
@@ -116,7 +116,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                                     class="fas fa-user-circle"> </span> </a>
                         <div class="dropdown-menu" aria-labelledby="navUserDropdown" style="position: absolute; top:
                         80px; left: 70%">
-                            <a class="dropdown-item" href="" data-toggle='modal' data-target='#loginModal'> Log in 3
+                            <a class="dropdown-item" href="" data-toggle='modal' data-target='#loginModal'> Log in 2
                             </a>
                             <a class="dropdown-item" href="" data-toggle='modal' data-target="#signupModal">Sign up</a>
                             <a class="dropdown-item" href="" data-toggle='modal' data-target='#resetPwModal'> Reset
@@ -193,7 +193,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <!--                            </a>-->
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <div><a class="dropdown-item" href="" data-toggle='modal'
-                                    data-target='#loginModal'> Log in 1 </a></div>
+                                    data-target='#loginModal'> Log in 3 </a></div>
                             <div><a class="dropdown-item" href="" data-toggle='modal'
                                     data-target="#signupModal">Sign up</a>
                             </div>
