@@ -124,7 +124,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                     </li>
                     &nbsp;
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button data-bs-toggle=" dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span
                                 class="fas fa-user-circle">
                             </span>
