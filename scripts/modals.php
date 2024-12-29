@@ -1,7 +1,7 @@
 <?php
 include_once("/var/www/hdsi/includes/utilities.php");
 //include_once("/var/www/hdsi/includes/login_loader.php"); // login_loader upsets modals
-include_once("/var/www/hdsi/includes/topnav.php");
+//include_once("/var/www/hdsi/includes/topnav.php");
 $root_path = '/var/www/hdsi';
 
 ?>
