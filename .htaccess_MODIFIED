@@ -7,8 +7,21 @@
 ##########
 
 
-Options -Indexes
-AddType application/x-httpd-php .htm .html .php
+##### ##### begin remove .php extension ##########
+##### ##### https://alexcican.com/post/how-to-remove-php-html-htm-extensions-with-htaccess/
+##### ##### not working; none of his snippets !!!!!!!!!!!!!!!!
+# RewriteEngine On
+# RewriteCond %{THE_REQUEST} !-f
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# RewriteEngine on
+# RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+# RewriteRule ^ /%1 [NC,L,R]
+# RewriteCond %{REQUEST_FILENAME}.php -f
+# RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+##### ##### end remove .php extension ##########
+
+# Options -Indexes
+#AddType application/x-httpd-php .htm .html
 #Options +FollowSymlinks
 #RewriteEngine On
 #RewriteBase /
@@ -22,18 +35,21 @@ AddType application/x-httpd-php .htm .html .php
 #RewriteCond %{THE_REQUEST} (.*)\.html
 #RewriteRule ^(.*)\.html $1.php [L]
 
-######  turn PHP to HTML   #####
+######  turn PHP to HTML: This works bud commented out to test reditioncs #####
 # https://stackoverflow.com/questions/4548860/replacing-php-ext-with-html-through-htaccess
 # RewriteEngine on
 # RewriteBase /
-
 # RewriteCond %{THE_REQUEST} (.*)\.php
 # RewriteRule ^(.*)\.php $1.html [R=301,L]
-
 # RewriteCond %{THE_REQUEST} (.*)\.html
 # RewriteRule ^(.*)\.html $1.php [L]
-
 #####  end of turn PHP to HTML
+
+
+##### this is from tychen.org
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 ## ##  ## dd ###
  ErrorDocument 404 https://hdsinet.us/404.php

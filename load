@@ -1,2 +1,2 @@
-sudo rm -rf /var/www/hdsi/*
+rm -rf /var/www/hdsi/*
 cp -pr * /var/www/hdsi/

@@ -106,7 +106,7 @@ TTTTTTTTTTTTTTT
     <section id="lower-section">
         <div class="grid-container" id="projects_grid">
             <div class="grid-item projects_background"
-                 style="background: url(https://tychen.us/hbdi/images/dna-binary-code.jpg) ;"> <!-- Dennis -->
+                 style="background: url(./images/dna-binary-code.jpg) ;"> <!-- Dennis -->
                 <div class="projects_title">
                     <div class="projects_label">
                         New Project
