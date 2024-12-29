@@ -124,30 +124,40 @@ if (!isset($_SESSION['email_hbdi'])) {
                     </li>
                     &nbsp;
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navUserDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span
-                                class="fas fa-user-circle"> </span> </a>
-                        <div class="dropdown-menu" aria-labelledby="navUserDropdown" style="position: absolute; top:
-                        80px; left: 70%">
-                            <a class="dropdown-item" href="" data-toggle='modal' data-target='#loginModal'> Log in
-                                3 </a> <a
-                                class="dropdown-item" href="" data-toggle='modal' data-target="#signupModal">Sign
-                                up</a>
-                            <a class="dropdown-item" href="" data-toggle='modal' data-target='#resetPwModal'> Reset
-                                password </a>
-                        </div>
-                    </li>
-
-                    &nbsp;
-
-                    <!--                    <li class="nav-item"-->
-                    <!--                        style="float: right; padding-right: 15px ">-->
-                    <!--                        <i class=" fas fa-search" style="font-size: 1.2em"></i>-->
-                    <!--                    </li>-->
-                </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button data-bs-toggle=" dropdown" aria-expanded="false">
+                            <span
+                                class="fas fa-user-circle">
+                            </span>
+                        </a>
+                        <!-- style="position: absolute; top: 80px; left: 70%" -->
+                        <ul class="dropdown-menu" aria-labelledby="navUserDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle='modal' data-target='#loginModal'>
+                                    Log in 3
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle='modal' data-target="#signupModal">
+                                    Sign up
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle='modal' data-target='#resetPwModal'> Reset
+                                    password </a>
+                            </li>
             </div>
-        </nav>
-        <!-- #### end of Nav class=navbar ##### -->
+            </li>
+
+            &nbsp;
+
+            <!--                    <li class="nav-item"-->
+            <!--                        style="float: right; padding-right: 15px ">-->
+            <!--                        <i class=" fas fa-search" style="font-size: 1.2em"></i>-->
+            <!--                    </li>-->
+            </ul>
+    </div>
+    </nav>
+    <!-- #### end of Nav class=navbar ##### -->
     </div>
     <!-- end of ##### inside wrapper ##### -->
 
