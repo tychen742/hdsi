@@ -25,7 +25,7 @@ if (!isset($_SESSION['email_hbdi']) or
     !isset($_SESSION['uid_hbdi'])) {
 
 // ##### do not redirect if index.php or account_verify.php
-    if (($this_page != '/hbdi/index.php') && ($this_page != '/hbdi/user/account_verify.php')) {
+    if (($this_page != '/hdsi/index.php') && ($this_page != '/hbdi/user/account_verify.php')) {
         echo '
         <script type="text/javascript"> showMessage("You are not logged in. <br> Redirecting to HDSI Home..."); </script>
         ';

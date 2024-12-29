@@ -166,8 +166,8 @@ if (!isset($_SESSION['email_hbdi'])) {
 
 
 <?php
-    ##### show normal navbar if logged in-->
     ##### End of Not Signed In
+    ##### show normal navbar if logged in-->
 } else {
 ?>
     <!-- ##### wrapper ##### -->
