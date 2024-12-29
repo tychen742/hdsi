@@ -1,5 +1,4 @@
 <?php
-echo "TESTTTTTTTTTTTT";
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -19,6 +18,7 @@ if ($server_name == 'hdsinet.us') {
 
 <!DOCTYPE html>
 <html>
+    echo "TTTTTTESTTTTTTTTTTTT";
 
 <head>
 
