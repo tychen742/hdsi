@@ -773,7 +773,6 @@ if (isset($_POST['submitResetPw'])) {
     $result = $stmt->fetch();
     $email_db = $result['email'];
     $username_db = $result['username'];
-    echo "TTTTTTTTTT";
     if ($email == $email_db) {
 
 //        generate a toekn

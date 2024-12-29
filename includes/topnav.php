@@ -47,7 +47,7 @@ error_reporting(E_ALL);
 ##### not signed in #####
 if (!isset($_SESSION['email_hbdi'])) {
     ?>
-
+echo "TTTTTTTTTT";
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
