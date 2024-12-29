@@ -181,9 +181,9 @@ $root_path = '/var/www/hdsi';
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
-                <button type="button" name="submitLogIn"> Log In</button>
+                <button class="btn" type="button" name="submitLogIn"> Log In</button>
 
-                <button class="btn" data-toggle="modal" type="button" data-dismiss="modal"
+                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
                         data-target="#signupModal" name="submitSignUp"
                         style="width: auto; background-color: #915664"
                         value=""> Sign Up
