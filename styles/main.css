@@ -843,3 +843,11 @@ input.invalid {
 p input {
     font-size: 14px;
 }
+
+.modal-body > form > .form-group > input {
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
