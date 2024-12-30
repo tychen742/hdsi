@@ -740,6 +740,7 @@ if (isset($_POST['submitLogOut'])) {
 <!--  ##### beginning Reset Password Modal ##### -->
 <div class="modal fade" id="resetPwModal" role="dialog">
     <div class="modal-dialog" role="document">
+
         <!-- Modal content-->
         <div class="modal-content">
             <form enctype="multipart/form-data" method="POST"
@@ -773,30 +774,58 @@ if (isset($_POST['submitLogOut'])) {
                     <br>
 
                 </div>
+
                 <div class="modal-footer" style="display: block; text-align: right">
-                    <button type="submit" name="submitResetPw" id="submit"
-                        class="btn"
-                        value=""> Reset
-                    </button>
 
-                    <br>
 
-                    <button class="btn" style="background-color:#915664;" data-toggle="modal"
-                        data-target="#loginModal"
-                        data-dismiss="modal"> log in
-                    </button>
-                    <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
-                        data-target="#signupModal"
-                        data-dismiss="modal"> Sign up </span>
-                    </button>
-                    <!-- 
-                    <div style="display: block">
-                        <div></div>
-                        Don't have an account? &nbsp;<a style="color: #915664; font-weight: 500" data-toggle="modal"
+                    <div class="modal-footer" style="display: block; text-align: right">
+                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+
+
+
+                        <button class="btn"
+                            type="submit"
+                            name="submitResetPw"
+                            data-bs-toggle="modal"
+                            type="button"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#resetPwModal">
+                            Reset Password
+                        </button>
+
+                        <br>
+
+                        <button class="btn"
+                            data-bs-toggle="modal"
+                            type="button"
+                            data-bs-dismiss="modal"
+                            data-bs-target="#loginModal"
+                            style="width: auto; background-color: #915664" value="">
+                            Log In
+                        </button>
+
+                        <button class="btn"
+                            data-bs-toggle="modal"
+                            type="button"
+                            data-dismiss="modal"
+                            data-bs-target="#signupModal"
+                            style="width: auto; background-color: #915664" value="">
+                            Sign Up
+                        </button>
+
+                        <!-- 
+                        <button class="btn" style="background-color:#915664;" 
+                        data-toggle="modal"
+                            data-target="#loginModal"
+                            data-dismiss="modal"> log in
+                        </button>
+                        <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
                             data-target="#signupModal"
-                            data-dismiss="modal"> Sign Up </a>
-                    </div> -->
-                </div>
+                            data-dismiss="modal"> Sign up </span>
+                        </button> -->
+
+
+                    </div>
             </form>
         </div>
     </div>
