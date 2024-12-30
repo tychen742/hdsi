@@ -773,14 +773,11 @@ if (isset($_POST['submitLogOut'])) {
                     <button class="btn"
                         type="submit"
                         name="submitResetPw"
-                        type="button"
                         data-bs-target="#resetPwModal"
                         data-bs-toggle="modal"
-                        
-                        >
+                        data-bs-dismiss="modal">
                         Reset Password
                     </button>
-                    <!-- data-bs-dismiss="modal" -->
 
                     <br>
 
