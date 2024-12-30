@@ -2,7 +2,7 @@
 <?php
 include_once('headers.php');
 include_once('utilities.php');
-include_once("../scripts/modals.php");
+// include_once("../scripts/modals.php");
 
 
 if (isset($_SESSION['uid_hbdi'])) {
@@ -422,5 +422,5 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
 
 <?php
 unset($id_project);
-// include_once("/var/www/hdsi/scripts/modals.php");
+include_once("/var/www/hdsi/scripts/modals.php");
 ?>
