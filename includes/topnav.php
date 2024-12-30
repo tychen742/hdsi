@@ -45,7 +45,7 @@ if (!isset($_SESSION['email_hbdi'])) {
     <!--        ##### topnav wrapper #####-->
     <div class="topnav_wrapper">
         <!-- ##### the Navigation Bar navbar ##### -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar_customize">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light navbar_customize">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#topNav"
                 aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
