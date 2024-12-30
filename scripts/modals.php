@@ -153,12 +153,12 @@ include_once("/var/www/hdsi/includes/utilities.php");
         <div class="modal-content">
 
             <div class="modal-header">
-                <!-- <div class="modal-header"> -->
+                <div class="modal-header">
                     <div class="modal-title"> Log In</div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                <!-- </div> -->
+                </div>
             </div>
 
             <div class="modal-body">
