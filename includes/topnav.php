@@ -117,8 +117,8 @@ if (!isset($_SESSION['email_hbdi'])) {
                     <li class="nav-item">
                         <a class="dropdown-item" href=""
                             data-bs-toggle='modal'
-                            data-bs-target='#loginModal'>
-                            Log In 2
+                            data-bs-target='#loginModal'> 
+                            Log In 2 
                         </a>
                     </li>
                     &nbsp;
