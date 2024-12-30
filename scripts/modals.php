@@ -824,8 +824,8 @@ if (isset($_POST['submitLogOut'])) {
                             data-dismiss="modal"> Sign up </span>
                         </button> -->
 
-
                     </div>
+                </div>
             </form>
         </div>
     </div>
