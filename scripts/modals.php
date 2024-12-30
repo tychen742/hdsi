@@ -181,7 +181,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                 </form>
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer" style="display: block">
                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
 
 
@@ -189,8 +189,8 @@ include_once("/var/www/hdsi/includes/utilities.php");
                     data-bs-target="#loginModal" name="submitLogIn">
                     Log In
                 </button>
-            </div>
-            <div class="modal-footer">
+            
+
                 <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
                     data-bs-target="#signupModal" name="submitSignUp"
                     style="width: auto; background-color: #915664" value="">
