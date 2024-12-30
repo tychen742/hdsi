@@ -4,7 +4,7 @@ $charset = 'utf8mb4';
 $host = "localhost";
 $dbname = "hbdi";
 
-$dbuser = "hbdi";
+$dbuser = "tychen";
 // $password = "passwd@2020";
 $password = "Redcar@@2020";
 
