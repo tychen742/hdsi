@@ -152,24 +152,23 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
         <div class="modal-content">
 
-            <div class="modal-header">
-                <div class="modal-title"> Log In</div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"></span>
-                </button>
-            </div>
+            <form method="POST">
 
-            <div class="modal-body">
+                <div class="modal-header">
+                    <div class="modal-title"> Log In</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
 
-                <form method="POST">
+                <div class="modal-body">
                     <div class="mb-3">
-                        <!--                        <label>Email address</label>-->
                         <label for="recipient-email" class="col-form-label"></label> <input type="text"
                             class="form-control"
                             id="recipient-email"
                             placeholder="email"
                             name="email">
-                        <!--                        <small class="form-text text-muted"> We keep your information private. </small>-->
+                        <small class="form-text text-muted"> We keep your information private. </small>
                     </div>
 
                     <div class="mb-3">
@@ -179,41 +178,39 @@ include_once("/var/www/hdsi/includes/utilities.php");
                             placeholder="password">
                         <!--                            <input type="password" placeholder="password" name="password" class="form-control">-->
                     </div>
-                </form>
-            </div>
+                </div>
 
-            <div class="modal-footer" style="display: block; text-align: right">
-                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <div class="modal-footer" style="display: block; text-align: right">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                    <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                        data-bs-target="#loginModal" name="submitLogIn">
+                        Log In
+                    </button>
 
+                    <br>
 
-                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                    data-bs-target="#loginModal" name="submitLogIn">
-                    Log In
-                </button>
+                    <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                        data-bs-target="#signupModal" name="submitSignUp"
+                        style="width: auto; background-color: #915664" value="">
+                        Sign Up
+                    </button>
 
-                <br>
-
-                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                    data-bs-target="#signupModal" name="submitSignUp"
-                    style="width: auto; background-color: #915664" value="">
-                    Sign Up
-                </button>
-
-                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                    data-bs-target="#resetPwModal" name="resetPwModal"
-                    style="width: auto; background-color: #915664" value="">
-                    Reset Password
-                </button>
-            </div>
-            <!-- <div>
+                    <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                        data-bs-target="#resetPwModal" name="resetPwModal"
+                        style="width: auto; background-color: #915664" value="">
+                        Reset Password
+                    </button>
+            </form>
+        </div>
+        <!-- <div>
                     Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
                         data-target="#resetPwModal"
                         data-dismiss="modal"> Reset Password </span>
                 </div> -->
-        </div>
-
     </div>
-    <!-- end of class: model content        -->
+
+</div>
+<!-- end of class: model content        -->
 </div>
 
 <!-- ##### End of Login Modal ##### -->
@@ -505,16 +502,16 @@ if (isset($_POST['submitLogIn'])) {
                     value="sign up"> Sign Up
                 </button>
                 <br>
-                <button class="btn" style="float: right; background-color: #915664" 
+                <button class="btn" style="float: right; background-color: #915664"
                     data-toggle="modal"
                     data-target="#loginModal"
                     data-dismiss="modal"> log in
                 </button>
 
-                <button class="btn" style="float: right; background-color: #915664" 
+                <button class="btn" style="float: right; background-color: #915664"
                     data-toggle="modal"
                     data-target="#resetPwModal"
-                    data-dismiss="modal"> Reset password 
+                    data-dismiss="modal"> Reset password
 
                 </button>
             </div>
