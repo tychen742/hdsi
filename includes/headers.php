@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 include_once('db_conn.php');
 //include_once('login_loader.php');
 $server_name = $_SERVER['SERVER_NAME'];
-echo $server_name;
+echo "\n" + $server_name;
 if ($server_name == 'hdsinet.us') {
     $path = '/var/www/hdsi';
     $p = 'https://hdsinet.us/';
