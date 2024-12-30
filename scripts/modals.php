@@ -739,7 +739,7 @@ if (isset($_POST['submitLogOut'])) {
 
         <!-- Modal content-->
         <div class="modal-content">
-            <form enctype="multipart/form-data" method="POST"
+            <form enctype="multipart/form-data" method="POST" name="submitResetPw"
                 onsubmit="return validate();">
 
                 <div class="modal-header">
@@ -773,7 +773,6 @@ if (isset($_POST['submitLogOut'])) {
                     <input class="btn-success"
                         id="submitResetPw"
                         type="submit"
-                        name="submitResetPw"
                         data-bs-target="#resetPwModal"
                         data-bs-toggle="modal"
                         data-bs-dismiss="modal">
