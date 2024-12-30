@@ -1,17 +1,17 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
+    ini_set("error_log", "~/php_errors.log");
 }
 
 //include_once('headers.php');
 include_once('db_conn.php');
 //include_once('login_loader.php');
 $server_name = $_SERVER['SERVER_NAME'];
-echo nl2br ("\n {$server_name}");
+echo nl2br("\n {$server_name}");
 if ($server_name == 'hdsinet.us') {
     $path = '/var/www/hdsi';
     $p = 'https://hdsinet.us/';
-
 } else {
     $path = 'localhost';
     //    $p = 'http://192.168.60.107';
@@ -75,4 +75,4 @@ if ($server_name == 'hdsinet.us') {
 
 <dody>
 
-<?php include('topnav.php'); ?>
+    <?php include('topnav.php'); ?>
