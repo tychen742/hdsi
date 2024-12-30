@@ -149,15 +149,18 @@ include_once("/var/www/hdsi/includes/utilities.php");
 <!-- TODOO: solved. it's requiring double log-in to log into the system. Why??? -->
 <div class="modal fade" id="loginModal" role="dialog" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
     <div class="modal-dialog">
+
         <div class="modal-content">
+
             <div class="modal-header">
-                <div class="modal-header">
+                <!-- <div class="modal-header"> -->
                     <div class="modal-title"> Log In</div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
+                <!-- </div> -->
             </div>
+
             <div class="modal-body">
                 <form>
                     <div class="mb-3">
@@ -414,18 +417,20 @@ include_once("/var/www/hdsi/includes/utilities.php");
 <div class="modal fade" id="signupModal" role="dialog" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
     <div class="modal-dialog">
 
-        <!-- Modal content-->
         <div class="modal-content">
-            <form enctype="multipart/form-data" method="POST" onsubmit="return validate();">
-                <div class="modal-header">
-                    <h4 class="modal-title"> Sign Up </h4>
-                    <span>
-                        <button type="button" class="close" data-dismiss="modal">
-                            &times;
-                        </button>
-                    </span>
-                </div>
-                <div class="modal-body">
+
+            <div class="modal-header">
+                <h4 class="modal-title"> Sign Up </h4>
+                <span>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </span>
+            </div>
+
+            <div class="modal-body">
+
+                <form enctype="multipart/form-data" method="POST" onsubmit="return validate();">
 
                     <div class="form-group">
                         <input type="text" name="name_first" id="name_first"
@@ -480,24 +485,25 @@ include_once("/var/www/hdsi/includes/utilities.php");
                             <span id="affiliation_error" class="signUpError"> </span>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" name="submitSignUp" id="submitSingUp" style="color: white"
-                        class="btn"
-                        value="sign up"> Sign Up
-                    </button>
-                    <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
-                        data-target="#loginModal"
-                        data-dismiss="modal"> log in
-                    </button>
+                </form>
+            </div>
 
-                    <div>
-                        Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
-                            data-target="#resetPwModal"
-                            data-dismiss="modal"> Reset Password </span>
-                    </div>
+            <div class="modal-footer">
+                <button type="submit" name="submitSignUp" id="submitSingUp" style="color: white"
+                    class="btn"
+                    value="sign up"> Sign Up
+                </button>
+                <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
+                    data-target="#loginModal"
+                    data-dismiss="modal"> log in
+                </button>
+
+                <div>
+                    Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
+                        data-target="#resetPwModal"
+                        data-dismiss="modal"> Reset Password </span>
                 </div>
-            </form>
+            </div>
         </div>
         <!-- end of modal content       -->
     </div>
