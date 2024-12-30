@@ -438,7 +438,7 @@ if (isset($_POST['submitLogIn'])) {
                 </button>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body" style="padding-bottom: 5px">
 
                 <form enctype="multipart/form-data" method="POST" onsubmit="return validate();">
 
