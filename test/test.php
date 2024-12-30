@@ -1,4 +1,7 @@
 <?php
+
+echo ini_get('error_log');
+
 //include_once('./includes/topnav.php');
 
 echo "Testing basename: " . basename(__FILE__, '.php') . "<br>";
