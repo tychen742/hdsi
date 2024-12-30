@@ -505,14 +505,16 @@ if (isset($_POST['submitLogIn'])) {
                     value="sign up"> Sign Up
                 </button>
                 <br>
-                <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
+                <button class="btn" style="float: right; background-color: #915664" 
+                    data-toggle="modal"
                     data-target="#loginModal"
                     data-dismiss="modal"> log in
                 </button>
 
-                <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
+                <button class="btn" style="float: right; background-color: #915664" 
+                    data-toggle="modal"
                     data-target="#resetPwModal"
-                    data-dismiss="modal"> Reset password </span>
+                    data-dismiss="modal"> Reset password 
                 </button>
             </div>
             <!-- <div>
@@ -530,6 +532,8 @@ if (isset($_POST['submitLogIn'])) {
 <!-- ##### Sing Up SignUP Modal Processing ##### -->
 <?php
 if (isset($_POST['submitSignUp'])) {  //  working.
+
+    echo "TTTTTTTTTTTTTTTT";
 
     error_log("signUp POSTed @topnav signUp modal", 0);
     $name_first = $name_last = $username = $email = $password1 = $password2 = $affiliation = "";
@@ -737,9 +741,9 @@ if (isset($_POST['submitLogOut'])) {
 
                 <div class="modal-header">
                     <h4 class="modal-title"> Reset Password </h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close">
-                         <span aria-hidden="true"></span>
-                     </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
                     <!-- <button type="button" class="close" data-dismiss="modal">
                     </button> -->
                 </div>
