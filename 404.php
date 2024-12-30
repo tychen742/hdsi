@@ -1,4 +1,5 @@
 <?php
+include('/var/www/hdsi/includes/headers.php');
 include('./includes/topnav.php');
 ?>
 
