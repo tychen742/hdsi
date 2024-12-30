@@ -203,11 +203,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                 </div>
             </form>
         </div>
-        <!-- <div>
-                    Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
-                        data-target="#resetPwModal"
-                        data-dismiss="modal"> Reset Password </span>
-                </div> -->
+
     </div>
 
 </div>
@@ -751,8 +747,6 @@ if (isset($_POST['submitLogOut'])) {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"></span>
                     </button>
-                    <!-- <button type="button" class="close" data-dismiss="modal">
-                    </button> -->
                 </div>
 
                 <div class="modal-body">
@@ -776,60 +770,42 @@ if (isset($_POST['submitLogOut'])) {
                 </div>
 
                 <div class="modal-footer" style="display: block; text-align: right">
+                    <button class="btn"
+                        type="submit"
+                        name="submitResetPw"
+                        type="button">
+                        Reset Password
+                    </button>
+                    <!-- data-bs-dismiss="modal" -->
+                    <!-- data-bs-toggle="modal" -->
+                    <!-- data-bs-target="#resetPwModal" -->
 
+                    <br>
 
-                    <div class="modal-footer" style="display: block; text-align: right">
-                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                    <button class="btn"
+                        data-bs-toggle="modal"
+                        type="button"
+                        data-bs-dismiss="modal"
+                        data-bs-target="#loginModal"
+                        style="width: auto; background-color: #915664" value="">
+                        Log In
+                    </button>
 
+                    <button class="btn"
+                        data-bs-toggle="modal"
+                        type="button"
+                        data-dismiss="modal"
+                        data-bs-target="#signupModal"
+                        style="width: auto; background-color: #915664" value="">
+                        Sign Up
+                    </button>
 
-
-                        <button class="btn"
-                            type="submit"
-                            name="submitResetPw"
-                            data-bs-toggle="modal"
-                            type="button"
-                            data-bs-dismiss="modal"
-                            data-bs-target="#resetPwModal">
-                            Reset Password
-                        </button>
-
-                        <br>
-
-                        <button class="btn"
-                            data-bs-toggle="modal"
-                            type="button"
-                            data-bs-dismiss="modal"
-                            data-bs-target="#loginModal"
-                            style="width: auto; background-color: #915664" value="">
-                            Log In
-                        </button>
-
-                        <button class="btn"
-                            data-bs-toggle="modal"
-                            type="button"
-                            data-dismiss="modal"
-                            data-bs-target="#signupModal"
-                            style="width: auto; background-color: #915664" value="">
-                            Sign Up
-                        </button>
-
-                        <!-- 
-                        <button class="btn" style="background-color:#915664;" 
-                        data-toggle="modal"
-                            data-target="#loginModal"
-                            data-dismiss="modal"> log in
-                        </button>
-                        <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
-                            data-target="#signupModal"
-                            data-dismiss="modal"> Sign up </span>
-                        </button> -->
-
-                    </div>
                 </div>
             </form>
         </div>
     </div>
-    <!-- end of passwordReset modal content       -->
+</div>
+<!-- end of passwordReset modal content       -->
 </div>
 <!-- ##### End of Reset Password Reset Modal ##### -->
 <!-- ##### process reset password reset process ##### -->
@@ -863,7 +839,7 @@ if (isset($_POST['submitResetPw'])) {
     $username_db = $result['username'];
     if ($email == $email_db) {
 
-        //        generate a toekn
+        //        generate a token
         $token = substr("abcdefghijklmnopqrstuvwxyz", mt_rand(0, 25), 1) . substr(md5(time()), 1);
         $pass_hash = password_hash("$token", PASSWORD_DEFAULT);
         /// save token to mysql (UPDATE to replace passwd)
@@ -880,12 +856,12 @@ if (isset($_POST['submitResetPw'])) {
         $link = "<a href='$p/user/pw_reset_process.php?key=" . $email_db . "&reset=" . $pass_hash . "'> Click to reset password</a>";
         try {
             $headers = 'MIME-Version: 1.0' . "\r\n";
-            $headers .= 'From: admin@hbdi<admin@hbdi.fsu.edu>' . "\r\n";
+            $headers .= 'From: admin@hdsi<admin@hdsi>' . "\r\n";
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
             // the message
             $msg = "
-                DO NOT reply to this email. Contact the website administrator for support or questions. <br><br>
+                DO NOT reply to this email. Contact the HDSI Office for technical support or questions. <br><br>
                 Please click on the link to reset your password: $link. <br><br>
                 
                 If the link is not working for you, please copy and paste the URL below
@@ -896,11 +872,11 @@ if (isset($_POST['submitResetPw'])) {
             // use wordwrap() if lines are longer than 70 characters
             $msg = wordwrap($msg, 70);
             // send email
-            mail("$email_db", "HBDI: Reset Password", "$msg", "$headers");
+            mail("$email_db", "HDSI: Reset Password", "$msg", "$headers");
             // message user
             $msg = "
             <div id='php-message'> Hi, $username_db, <br>
-                Reset email sent by admin@hbdi (admin@hbdi.fsu.edu) to $email_db. <br>
+                Reset email sent by admin@hbdi (admin@hdsi) to $email_db. <br>
                 Check your Spam folder if you don't see the email.</div> <br>";
 
             echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
