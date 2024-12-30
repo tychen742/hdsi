@@ -511,7 +511,8 @@ if (isset($_POST['submitLogIn'])) {
                     data-dismiss="modal"> log in
                 </button>
 
-                <button class="btn" style="float: right; background-color: #915664" 
+                <!-- <button class="btn" style="float: right; background-color: #915664"  -->
+                <button class="btn" style="float: right; background-color: 'red'" 
                     data-toggle="modal"
                     data-target="#resetPwModal"
                     data-dismiss="modal"> Reset password 
