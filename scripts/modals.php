@@ -164,7 +164,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                 <form>
                     <div class="mb-3">
                         <!--                        <label>Email address</label>-->
-                        <label for="recipient-email" class="col-form-label">email</label> <input type="text"
+                        <label for="recipient-email" class="col-form-label"></label> <input type="text"
                             class="form-control"
                             id="recipient-email"
                             placeholder="email"
@@ -173,9 +173,10 @@ include_once("/var/www/hdsi/includes/utilities.php");
                     </div>
 
                     <div class="mb-3">
-                        <label for="recipient-password" class="col-form-label">Password</label> <input type="text"
+                        <label for="recipient-password" class="col-form-label"></label> <input type="text"
                             class="form-control"
-                            id="recipient-password">
+                            id="recipient-password"
+                            placeholder="email">
                         <!--                            <input type="password" placeholder="password" name="password" class="form-control">-->
                     </div>
                 </form>
@@ -189,7 +190,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                     data-bs-target="#loginModal" name="submitLogIn">
                     Log In
                 </button>
-            
+
                 <br>
 
                 <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
