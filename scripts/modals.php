@@ -182,7 +182,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                 </form>
             </div>
 
-            <div class="modal-footer" style="text-align: right">
+            <div class="modal-footer" style="display: block; text-align: right">
                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
 
 
@@ -498,7 +498,7 @@ if (isset($_POST['submitLogIn'])) {
                 </form>
             </div>
 
-            <div class="modal-footer" style="text-align: right">
+            <div class="modal-footer" style="display: block; text-align: right">
                 <button type="submit" name="submitSignUp" id="submitSingUp" style="color: white"
                     class="btn"
                     value="sign up"> Sign Up
@@ -736,9 +736,9 @@ if (isset($_POST['submitLogOut'])) {
 
                 <div class="modal-header">
                     <h4 class="modal-title"> Reset Password </h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close">
+                         <span aria-hidden="true"></span>
+                     </button>
                     <!-- <button type="button" class="close" data-dismiss="modal">
                     </button> -->
                 </div>
@@ -762,7 +762,7 @@ if (isset($_POST['submitLogOut'])) {
                     <br>
 
                 </div>
-                <div class="modal-footer" style="text-align: right">
+                <div class="modal-footer" style="display: block; text-align: right">
                     <button type="submit" name="submitResetPw" id="submit"
                         class="btn"
                         value=""> Reset
