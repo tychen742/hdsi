@@ -146,7 +146,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
 
 <!-- ##### Log In: Login Modal ##### -->
-<!-- TODOO: solved. it's requiring double log-in to log into the system. Why??? -->
+<!-- TODO: solved. it's requiring double log-in to log into the system. Why??? -->
 <div class="modal fade" id="loginModal" role="dialog" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
     <div class="modal-dialog">
 
@@ -161,7 +161,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
             <div class="modal-body">
 
-                <form>
+                <form method="POST" action="submitLogIn">
                     <div class="mb-3">
                         <!--                        <label>Email address</label>-->
                         <label for="recipient-email" class="col-form-label"></label> <input type="text"
