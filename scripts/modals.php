@@ -190,6 +190,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                     Log In
                 </button>
             
+                <br>
 
                 <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
                     data-bs-target="#signupModal" name="submitSignUp"
