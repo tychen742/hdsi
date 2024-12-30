@@ -111,7 +111,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <a class="dropdown-item" href="#"
                             data-bs-toggle='modal'
                             data-bs-target='#signupModal'>
-                            Sign Up
+                            Sign Up 1
                         </a>
                     </li>
                     &nbsp;
@@ -122,7 +122,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <a class="dropdown-item" href=""
                             data-bs-toggle='modal'
                             data-bs-target='#loginModal'>
-                            Log In 2
+                            Log In 1
                         </a>
                     </li>
                     &nbsp;
