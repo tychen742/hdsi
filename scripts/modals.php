@@ -760,35 +760,34 @@ if (isset($_POST['submitLogOut'])) {
                     <br>
 
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer" style="display: block; text-align: right">
                     <button type="submit" name="submitResetPw" id="submit"
                         class="btn"
                         value=""> Reset
                     </button>
+                    
+                    <br>
 
                     <button class="btn" style="background-color:#915664;" data-toggle="modal"
                         data-target="#loginModal"
                         data-dismiss="modal"> log in
                     </button>
-
-                    <br>
-                </div>
-                <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
-                    data-target="#signupModal"
-                    data-dismiss="modal"> Sign up </span>
-                </button>
-                <!-- 
+                    <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
+                        data-target="#signupModal"
+                        data-dismiss="modal"> Sign up </span>
+                    </button>
+                    <!-- 
                     <div style="display: block">
                         <div></div>
                         Don't have an account? &nbsp;<a style="color: #915664; font-weight: 500" data-toggle="modal"
                             data-target="#signupModal"
                             data-dismiss="modal"> Sign Up </a>
                     </div> -->
+                </div>
+            </form>
         </div>
-        </form>
     </div>
-</div>
-<!-- end of passwordReset modal content       -->
+    <!-- end of passwordReset modal content       -->
 </div>
 <!-- ##### End of Reset Password Reset Modal ##### -->
 <!-- ##### process reset password reset process ##### -->
