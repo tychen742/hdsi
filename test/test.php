@@ -39,7 +39,6 @@ echo "The present working directory (__DIR__): " . __DIR__ . "<br>";
 $server_name = $_SERVER['SERVER_NAME'];
 echo "The SERVER_NAME (\$_SERVER['SERVER_NAME']) is: $server_name <br>";
 
-//ini_set("log_errors", 1);
 //ini_set("error_log",$_SERVER['DOCUMENT_ROOT']."/hbdi/test/error_log");
 
 

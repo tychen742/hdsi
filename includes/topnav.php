@@ -12,9 +12,10 @@ if (isset($_SESSION['uid_hbdi'])) {
 //}
 // ##### show PHP error messages #####
 // ##### commented out temporarily
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+ini_set ('display_errors', 'on');
+ini_set ('log_errors', 'on');
+ini_set ('display_startup_errors', 'on');
+ini_set ('error_reporting', E_ALL);
 ?>
 
 
