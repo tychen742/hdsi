@@ -738,7 +738,7 @@ if (isset($_POST['submitLogOut'])) {
                 <div class="modal-body">
                     <div>
                         <input type="text" name="username"
-                            placeholder="Username"
+                            placeholder="username"
                             class="form-control">
                         <div><span id="username_error"></span></div>
                     </div>
@@ -747,7 +747,7 @@ if (isset($_POST['submitLogOut'])) {
                         OR
                     </div>
 
-                    <input type="text" name="email" placeholder="Email address" class="form-control"
+                    <input type="text" name="email" placeholder="email address" class="form-control"
                         style="margin-top: 0">
                     <div><span id="email_error"></span></div>
 
