@@ -499,20 +499,31 @@ if (isset($_POST['submitLogIn'])) {
 
             <div class="modal-footer" style="display: block; text-align: right">
                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                <button class="btn" id="submitSingUp" data-bs-toggle="modal" type="submit" data-dismiss="modal"
+                <button class="btn"
+                    id="submitSingUp"
+                    data-bs-toggle="modal"
+                    type="submit"
+                    data-dismiss="modal"
                     data-bs-target="#signupModal" name="submitSignUp">
                     Sign Up
                 </button>
 
                 <br>
 
-                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                    data-bs-target="#loginModal" name="submitLogIn">
+                <button class="btn"
+                    data-bs-toggle="modal"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    data-bs-target="#loginModal"
+                    style="width: auto; background-color: #915664" value="">
                     Log In
                 </button>
 
-                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                    data-bs-target="#resetPwModal" name="resetPwModal"
+                <button class="btn"
+                    data-bs-toggle="modal"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    data-bs-target="#resetPwModal"
                     style="width: auto; background-color: #915664" value="">
                     Reset Password
                 </button>
