@@ -176,7 +176,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                         <label for="recipient-password" class="col-form-label"></label> <input type="text"
                             class="form-control"
                             id="recipient-password"
-                            placeholder="email">
+                            placeholder="password">
                         <!--                            <input type="password" placeholder="password" name="password" class="form-control">-->
                     </div>
                 </form>
@@ -742,7 +742,7 @@ if (isset($_POST['submitLogOut'])) {
                             class="form-control">
                         <div><span id="username_error"></span></div>
                     </div>
-                    <div style="height: 20px; color: #818181;
+                    <div style="height: 1rem; color: #818181;
                      padding-bottom: 1px; position: relative; left: 47%; font-size: 12px; width: 10%;">
                         OR
                     </div>
