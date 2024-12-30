@@ -52,8 +52,9 @@ if (!isset($_SESSION['email_hbdi'])) {
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- style="display: inline-block;" #### this caused the NOLE not hidden ##### -->
             <div class="collapse navbar-collapse" id="topNav"
-   
+
                 <ul id="navbar-nav" class="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <!-- ##### the social media icons, the Brand, and the menu items ##### -->
