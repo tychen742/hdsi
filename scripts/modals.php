@@ -444,7 +444,7 @@ if (isset($_POST['submitLogIn'])) {
 
                     <div class="form-group">
                         <input type="text" name="name_first" id="name_first"
-                            placeholder="First Name"
+                            placeholder="first name"
                             class="form-control">
                         <div>
                             <div id="name_first_error" class="signUpError"></div>
@@ -453,7 +453,7 @@ if (isset($_POST['submitLogIn'])) {
 
                         <!-- <div class="form-group"> -->
                         <input type="text" name="name_last" id="name_last"
-                            placeholder="Last Name"
+                            placeholder="last name"
                             class="form-control">
                         <div>
                             <div id="name_last_error" class="signUpError"></div>
@@ -462,35 +462,35 @@ if (isset($_POST['submitLogIn'])) {
 
                         <!-- <div class="form-group"> -->
                         <input type="text" name="username" id="username"
-                            placeholder="Username"
+                            placeholder="username"
                             class="form-control">
                         <div><span id="username_error" class="signUpError"></span></div>
                         <!-- </div> -->
 
                         <!-- <div class="form-group"> -->
                         <input type="text" name="email" id="email"
-                            placeholder="Email address"
+                            placeholder="email address"
                             class="form-control">
                         <div><span id="email_error" class="signUpError"></span></div>
                         <!-- </div> -->
 
                         <!-- <div class="form-group"> -->
                         <input type="text" name="password1" id="password1"
-                            placeholder="Password"
+                            placeholder="password"
                             class="form-control">
                         <div><span id="password1_error" class="signUpError"></span></div>
                         <!-- </div> -->
 
                         <!-- <div class="form-group"> -->
                         <input type="text" name="password2" id="password2"
-                            placeholder="Password again" class="form-control">
+                            placeholder="password again" class="form-control">
                         <div><span id="password2_error" class="signUpError"></span></div>
                         <div><span id="password_match_error" class="signUpError"></span></div>
                         <!-- </div> -->
 
                         <!-- <div class="form-group"> -->
                         <input class="form-control" type="text" name="affiliation" id="affiliation"
-                            placeholder="Affiliation">
+                            placeholder="affiliation">
                         <div>
                             <span id="affiliation_error" class="signUpError"> </span>
                         </div>
