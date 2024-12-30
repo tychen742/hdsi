@@ -1,6 +1,6 @@
 <!--<div id="footer-wrapper">-->
 
-<div class="footer">
+<div class="footer" style="margin-top: 20px;">
 
     <div class="block">
         © Florida State University <br>
