@@ -153,15 +153,14 @@ include_once("/var/www/hdsi/includes/utilities.php");
         <div class="modal-content">
 
             <div class="modal-header">
-                <div class="modal-header">
-                    <div class="modal-title"> Log In</div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <div class="modal-title"> Log In</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
 
             <div class="modal-body">
+                
                 <form>
                     <div class="mb-3">
                         <!--                        <label>Email address</label>-->
@@ -420,12 +419,10 @@ include_once("/var/www/hdsi/includes/utilities.php");
         <div class="modal-content">
 
             <div class="modal-header">
-                <h4 class="modal-title"> Sign Up </h4>
-                <span>
-                    <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                    </button>
-                </span>
+                <div class="modal-title"> Sign Up </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
 
             <div class="modal-body">
