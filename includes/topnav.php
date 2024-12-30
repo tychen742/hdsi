@@ -1,6 +1,6 @@
 <!-- ##### includes INCLUDES ##### -->
 <?php
-include_once('headers.php');
+// include_once('headers.php');
 include_once('utilities.php');
 // include_once("../scripts/modals.php");
 
