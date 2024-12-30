@@ -18,6 +18,7 @@ $options = [
 try {
     $pdo = new PDO($dsn, $dbuser, $password, $options);
 } catch (PDOException $e) {
+    echo "TTTTTTTTTT";
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 
