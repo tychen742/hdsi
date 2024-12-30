@@ -17,7 +17,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                 <div class="modal-header">
                     <!--                    <h4 class="modal-title">Add Files </h4>-->
                     <h4 class="modal-title"> Upload Files </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;
+                    <button type="button" class="close" data-dismiss="modal">
                     </button>
                 </div>
                 <div class="modal-body">
@@ -155,7 +155,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
             <div class="modal-header">
                 <div class="modal-title"> Log In</div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true"></span>
                 </button>
             </div>
 
@@ -421,7 +421,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
             <div class="modal-header">
                 <div class="modal-title"> Sign Up </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true"></span>
                 </button>
             </div>
 
@@ -653,7 +653,7 @@ showMessage('Something went wrong and your account was not created. Please try a
                     <h4 class="modal-title"> Log Out </h4>
                     <span>
                         <button type="button" class="close" data-dismiss="modal">
-                            &times;
+                            
                         </button>
                     </span>
                 </div>
@@ -718,7 +718,7 @@ if (isset($_POST['submitLogOut'])) {
                     <h4 class="modal-title"> Reset Password </h4>
                     <span>
                         <button type="button" class="close" data-dismiss="modal">
-                            &times;
+                            
                         </button>
                     </span>
                 </div>
@@ -859,7 +859,7 @@ if (isset($_POST['submitResetPw'])) {
                 <h4 class="modal-title"> Create New Project </h4>
                 <span>
                     <button type="button" class="close" data-dismiss="modal">
-                        &times;
+                        
                     </button>
                 </span>
             </div>
