@@ -500,8 +500,7 @@ if (isset($_POST['submitLogIn'])) {
             <div class="modal-footer" style="display: block; text-align: right">
                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
                 <button class="btn" id="submitSingUp" data-bs-toggle="modal" type="submit" data-dismiss="modal"
-                    data-bs-target="#signupModal" name="submitSignUp"
-                    style="width: auto; background-color: #915664" value="">
+                    data-bs-target="#signupModal" name="submitSignUp">
                     Sign Up
                 </button>
 
