@@ -314,21 +314,21 @@ if (isset($_POST['submitLogIn'])) {
         } else {
             echo '<script> showMessage("Password is incorrect. <br> Redirecting to HBDI Home..."); </script>';
             error_log('password INCorrect (topnav.php)', 0);
-            echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
+            echo "<meta http-equiv=REFRESH CONTENT=5;url=$p>";
             exit;
         }
     } else {
         // ##### your account is not activated.
         echo '<script> showMessage("Your account is not activated. <br> Please check your account creation confirmation email to activate. <br> Redirecting to HBDI Home in 5 seconds..."); </script>';
         error_log('Account not activated @topnav.php', 0);
-        echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
+        echo "<meta http-equiv=REFRESH CONTENT=5;url=$p>";
         exit;
     }
 } else {
     // ##### problem with DB
     error_log('query NOT run successfully @topnav.php', 0);
     echo "<script> showMessage('Email or password information incorrect. Please try again.<br> Contact Support if problem persists. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
-    echo "<meta http-equiv=REFRESH CONTENT=3;url=$p/index.php>";
+    echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
     exit;
 }
 
