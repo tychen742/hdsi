@@ -181,7 +181,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                 </form>
             </div>
 
-            <div class="modal-footer" style="display: block">
+            <div class="modal-footer" style="display: block; text-align: right">
                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
 
 
