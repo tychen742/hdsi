@@ -2,7 +2,7 @@
 include_once("/var/www/hdsi/includes/utilities.php");
 //include_once("/var/www/hdsi/includes/login_loader.php"); // login_loader upsets modals
 //include_once("/var/www/hdsi/includes/topnav.php");
-$root_path = '/var/www/hdsi';
+// $root_path = '/var/www/hdsi';
 
 ?>
 <!-- TODO: add a cookie here and after 3 logins, get rid of the login message when the user is familiar with the flow ???  -->

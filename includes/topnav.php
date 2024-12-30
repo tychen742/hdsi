@@ -107,8 +107,12 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <a id="navbar-brand" href="<?php echo $p; ?>"> NOLE </a>
                     </li>
                     &nbsp;
-                    <li class="nav-item" href="#" data-bs-toggle='modal' data-bs-target='#signupModal'>
-                        Sign Up
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="#"
+                            data-bs-toggle='modal'
+                            data-bs-target='#signupModal'>
+                            Sign Up
+                        </a>
                     </li>
                     &nbsp;
                     <!-- <li class="nav-item" href="#" data-bss-toggle='modal' data-bs-target="#loginModal">
@@ -117,8 +121,8 @@ if (!isset($_SESSION['email_hbdi'])) {
                     <li class="nav-item">
                         <a class="dropdown-item" href=""
                             data-bs-toggle='modal'
-                            data-bs-target='#loginModal'> 
-                            Log In 2 
+                            data-bs-target='#loginModal'>
+                            Log In 2
                         </a>
                     </li>
                     &nbsp;
@@ -141,8 +145,9 @@ if (!isset($_SESSION['email_hbdi'])) {
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" data-bs-toggle='modal' data-bs-target='#resetPwModal'> Reset
-                                    password </a>
+                                <a class="dropdown-item" data-bs-toggle='modal' data-bs-target='#resetPwModal'>
+                                    Reset password
+                                </a>
                             </li>
                         </ul>
                     </li>
