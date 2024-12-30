@@ -422,5 +422,5 @@ WHERE id_user = '$uid_hbdi' ")->fetchAll();
 
 <?php
 unset($id_project);
-include_once("/var/www/hdsi/scripts/modals.php");
+// include_once("/var/www/hdsi/scripts/modals.php");
 ?>
