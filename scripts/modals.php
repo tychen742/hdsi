@@ -735,11 +735,8 @@ if (isset($_POST['submitLogOut'])) {
                 onsubmit="return validate();">
                 <div class="modal-header">
                     <h4 class="modal-title"> Reset Password </h4>
-                    <span>
-                        <button type="button" class="close" data-dismiss="modal">
-
-                        </button>
-                    </span>
+                    <button type="button" class="close" data-dismiss="modal">
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div>
@@ -765,7 +762,7 @@ if (isset($_POST['submitLogOut'])) {
                         class="btn"
                         value=""> Reset
                     </button>
-                    
+
                     <br>
 
                     <button class="btn" style="background-color:#915664;" data-toggle="modal"
