@@ -161,7 +161,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
             <div class="modal-body">
 
-                <form method="POST" action="submitLogIn">
+                <form method="POST">
                     <div class="mb-3">
                         <!--                        <label>Email address</label>-->
                         <label for="recipient-email" class="col-form-label"></label> <input type="text"
