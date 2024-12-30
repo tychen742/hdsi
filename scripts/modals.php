@@ -770,13 +770,14 @@ if (isset($_POST['submitLogOut'])) {
                 </div>
 
                 <div class="modal-footer" style="display: block; text-align: right">
-                    <input class="btn-success"
-                        id="submitResetPw"
-                        type="submit"
-                        data-bs-target="#resetPwModal"
-                        data-bs-toggle="modal"
-                        data-bs-dismiss="modal">
-                    Reset Password
+
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    <!-- data-bs-target="#resetPwModal" -->
+                    <!-- data-bs-toggle="modal"  -->
+                    <!-- data-bs-dismiss="modal -->
+                    <!-- Reset Password -->
+                    <input class="btn btn-success"
+                        type="submit" id="submitResetPw">
                     </input>
 
                     <br>
