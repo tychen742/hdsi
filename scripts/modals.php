@@ -254,83 +254,83 @@ if (isset($_POST['submitLogIn'])) {
         if ($user_time_verified) {
             // ##### verify password #####
             // $isValid = password_verify($password_posted, $password_from_db);
-            if ($password_posted == $password_from_db) {
-            }
+            if ($password_posted == $password_from_db) {}
             $isValid = true;
         }
-        if ($isValid) {
-            // ##### Create SESSIONS ##### //{
-            error_log("Password is a match", 0);
-            $_SESSION['email_hbdi'] = $result['email'];
-            $_SESSION['username_hbdi'] = $result['username'];
-            $_SESSION['uid_hbdi'] = $result['id_user'];
-            error_log("Sessions created @ topnav.php ");
+            if ($isValid) {
+                // ##### Create SESSIONS ##### //{
+                error_log("Password is a match", 0);
+                $_SESSION['email_hbdi'] = $result['email'];
+                $_SESSION['username_hbdi'] = $result['username'];
+                $_SESSION['uid_hbdi'] = $result['id_user'];
+                error_log("Sessions created @ topnav.php ");
 
-            // TODO: what is this?
-            $uid_hdsi = $_SESSION['uid_hbdi'] = $result['id_user'];
-            //                $time_login = time();
-            //                $datetime_login = date('Y-m-d H:i:s', $time_login);
+                // TODO: what is this?
+                $uid_hdsi = $_SESSION['uid_hbdi'] = $result['id_user'];
+                //                $time_login = time();
+                //                $datetime_login = date('Y-m-d H:i:s', $time_login);
 
-            // ##### get and insert HTTP_USER_AGENT
-            $http_user_agent = $_SERVER['HTTP_USER_AGENT'];
-            $result = $pdo->query(" SELECT id_user, http_user_agent FROM location WHERE http_user_agent = '$http_user_agent'")->fetchAll();
+                // ##### get and insert HTTP_USER_AGENT
+                $http_user_agent = $_SERVER['HTTP_USER_AGENT'];
+                $result = $pdo->query(" SELECT id_user, http_user_agent FROM location WHERE http_user_agent = '$http_user_agent'")->fetchAll();
 
-            $location_exist = false;
-            foreach ($result as $record) {
-                if (($record['id_user'] == $uid_hdsi) && ($record['http_user_agent'] == $http_user_agent)) {
-                    $location_exist = true;
+                $location_exist = false;
+                foreach ($result as $record) {
+                    if (($record['id_user'] == $uid_hdsi) && ($record['http_user_agent'] == $http_user_agent)) {
+                        $location_exist = true;
+                    }
                 }
-            }
 
-            if (($location_exist != true)) {
-                $msg = " This a new device/browser for this account. Saving as new location...";
-                echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
-                error_log("echo \"<script> setTimeout(showMessage(' $msg '), 5000); </script>\"", 0);
-                // TODO: create a modal for user to agree to register this device.
+                if (($location_exist != true)) {
+                    $msg = " This a new device/browser for this account. Saving as new location...";
+                    echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
+                    error_log("echo \"<script> setTimeout(showMessage(' $msg '), 5000); </script>\"", 0);
+                    // TODO: create a modal for user to agree to register this device.
+
+                    $ip = new Get_IP_Address();
+                    $ip_address = $ip->getRealIpAddr();
+
+                    $stmt = $pdo->prepare(" INSERT INTO location (id_user, ip_address, http_user_agent) VALUES (?, ?, ?) ");
+                    $stmt->execute([$uid_hdsi, $ip_address, $http_user_agent]);
+                } else {
+                    $msg = " This device/browser for this account has been verified. ";
+                    echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
+                }
+                // ##### end of get and insert HTTP_USER_AGENT
+
+                // ##### login record in transaction_store records #####
+                //                $time_login = date('Y-m-d H:i:s', time());
 
                 $ip = new Get_IP_Address();
                 $ip_address = $ip->getRealIpAddr();
 
-                $stmt = $pdo->prepare(" INSERT INTO location (id_user, ip_address, http_user_agent) VALUES (?, ?, ?) ");
-                $stmt->execute([$uid_hdsi, $ip_address, $http_user_agent]);
+                $stmt = $pdo->prepare(" INSERT INTO transaction_store (id_user, ip_address, login) VALUES (?, ?, ?) ");
+                $stmt->execute([$uid_hdsi, $ip_address, 1]);
+                echo '<script> showMessage("Login successful. <br> Redirecting to your Dashboard..."); </script>';
+                echo "<meta http-equiv=REFRESH CONTENT=2;url=$p/dashboard.php>";
+                unset($_POST['submitLogIn']);
+                exit;
             } else {
-                $msg = " This device/browser for this account has been verified. ";
-                echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
+                echo '<script> showMessage("Password is incorrect. <br> Redirecting to HBDI Home..."); </script>';
+                error_log('password INCorrect (topnav.php)', 0);
+                echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
+                exit;
             }
-            // ##### end of get and insert HTTP_USER_AGENT
-
-            // ##### login record in transaction_store records #####
-            //                $time_login = date('Y-m-d H:i:s', time());
-
-            $ip = new Get_IP_Address();
-            $ip_address = $ip->getRealIpAddr();
-
-            $stmt = $pdo->prepare(" INSERT INTO transaction_store (id_user, ip_address, login) VALUES (?, ?, ?) ");
-            $stmt->execute([$uid_hdsi, $ip_address, 1]);
-            echo '<script> showMessage("Login successful. <br> Redirecting to your Dashboard..."); </script>';
-            echo "<meta http-equiv=REFRESH CONTENT=2;url=$p/dashboard.php>";
-            unset($_POST['submitLogIn']);
-            exit;
         } else {
-            echo '<script> showMessage("Password is incorrect. <br> Redirecting to HBDI Home..."); </script>';
-            error_log('password INCorrect (topnav.php)', 0);
-            echo "<meta http-equiv=REFRESH CONTENT=5;url=$p>";
+            // ##### your account is not activated.
+            echo '<script> showMessage("Your account is not activated. <br> Please check your account creation confirmation email to activate. <br> Redirecting to HBDI Home in 5 seconds..."); </script>';
+            error_log('Account not activated @topnav.php', 0);
+            echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
             exit;
         }
     } else {
-        // ##### your account is not activated.
-        echo '<script> showMessage("Your account is not activated. <br> Please check your account creation confirmation email to activate. <br> Redirecting to HBDI Home in 5 seconds..."); </script>';
-        error_log('Account not activated @topnav.php', 0);
-        echo "<meta http-equiv=REFRESH CONTENT=5;url=$p>";
+        // ##### problem with DB
+        error_log('query NOT run successfully @topnav.php', 0);
+        echo "<script> showMessage('Email or password information incorrect. Please try again.<br> Contact Support if problem persists. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
+        echo "<meta http-equiv=REFRESH CONTENT=3;url=$p/index.php>";
+        echo "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
         exit;
     }
-} else {
-    // ##### problem with DB
-    error_log('query NOT run successfully @topnav.php', 0);
-    echo "<script> showMessage('Email or password information incorrect. Please try again.<br> Contact Support if problem persists. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
-    // echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
-    exit;
-}
 
 ?>
 </div>
