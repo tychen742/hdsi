@@ -742,7 +742,7 @@ if (isset($_POST['submitLogOut'])) {
                             class="form-control">
                         <div><span id="username_error"></span></div>
                     </div>
-                    <div style="height: 1rem; color: #818181;
+                    <div style="height: 2rem; color: #818181;
                      padding-bottom: 1px; position: relative; left: 47%; font-size: 12px; width: 10%;">
                         OR
                     </div>
