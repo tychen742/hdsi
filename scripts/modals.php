@@ -182,21 +182,26 @@ include_once("/var/www/hdsi/includes/utilities.php");
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
 
                 <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
                     data-bs-target="#loginModal" name="submitLogIn"> Log In</button>
-
+                <br>
                 <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
                     data-bs-target="#signupModal" name="submitSignUp"
-                    style="width: auto; background-color: #915664"
-                    value=""> Sign Up
+                    style="width: auto; background-color: #915664" value=""> 
+                    Sign Up
                 </button>
-                <div>
+                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                    data-bs-target="#resetPwModal" name="resetPwModal"
+                    style="width: auto; background-color: #915664" value=""> 
+                    Reset Password
+                </button>
+                <!-- <div>
                     Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
                         data-target="#resetPwModal"
                         data-dismiss="modal"> Reset Password </span>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -653,7 +658,7 @@ showMessage('Something went wrong and your account was not created. Please try a
                     <h4 class="modal-title"> Log Out </h4>
                     <span>
                         <button type="button" class="close" data-dismiss="modal">
-                            
+
                         </button>
                     </span>
                 </div>
@@ -718,7 +723,7 @@ if (isset($_POST['submitLogOut'])) {
                     <h4 class="modal-title"> Reset Password </h4>
                     <span>
                         <button type="button" class="close" data-dismiss="modal">
-                            
+
                         </button>
                     </span>
                 </div>
@@ -859,7 +864,7 @@ if (isset($_POST['submitResetPw'])) {
                 <h4 class="modal-title"> Create New Project </h4>
                 <span>
                     <button type="button" class="close" data-dismiss="modal">
-                        
+
                     </button>
                 </span>
             </div>
