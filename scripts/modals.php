@@ -194,7 +194,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
                 <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
                     data-bs-target="#signupModal" name="submitSignUp"
-                    style="width: auto; background-color:rgb(134, 106, 113)" value="">
+                    style="width: auto; background-color: #915664" value="">
                     Sign Up
                 </button>
 

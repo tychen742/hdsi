@@ -111,18 +111,15 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <a class="dropdown-item" href="#"
                             data-bs-toggle='modal'
                             data-bs-target='#signupModal'>
-                            Sign Up 1
+                            Sign up
                         </a>
                     </li>
                     &nbsp;
-                    <!-- <li class="nav-item" href="#" data-bss-toggle='modal' data-bs-target="#loginModal">
-                        Log In 2
-                    </li> -->
                     <li class="nav-item">
                         <a class="dropdown-item" href=""
                             data-bs-toggle='modal'
                             data-bs-target='#loginModal'>
-                            Log In 1
+                            Log in
                         </a>
                     </li>
                     &nbsp;
@@ -136,7 +133,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <ul class="dropdown-menu" aria-labelledby="navUserDropdown">
                             <li>
                                 <a class="dropdown-item" data-bs-toggle='modal' data-bs-target='#loginModal'>
-                                    Log in 3
+                                    Log in
                                 </a>
                             </li>
                             <li>
@@ -218,7 +215,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <!--                            </a>-->
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <div><a class="dropdown-item" href="" data-bs-toggle='modal'
-                                    data-bs-target='#loginModal'> Log in 1 </a></div>
+                                    data-bs-target='#loginModal'> Log in </a></div>
                             <div><a class="dropdown-item" href="" data-bs-toggle='modal'
                                     data-bs-target="#signupModal">Sign up</a>
                             </div>
