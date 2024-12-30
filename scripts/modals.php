@@ -733,11 +733,16 @@ if (isset($_POST['submitLogOut'])) {
         <div class="modal-content">
             <form enctype="multipart/form-data" method="POST"
                 onsubmit="return validate();">
+
                 <div class="modal-header">
                     <h4 class="modal-title"> Reset Password </h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
                     </button>
+                    <!-- <button type="button" class="close" data-dismiss="modal">
+                    </button> -->
                 </div>
+
                 <div class="modal-body">
                     <div>
                         <input type="text" name="username"
