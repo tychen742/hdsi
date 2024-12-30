@@ -149,7 +149,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 <!-- TODOO: solved. it's requiring double log-in to log into the system. Why??? -->
 <div class="modal fade" id="loginModal" role="dialog" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <!-- ##### Modal content-->
             <div class="modal-header">
                 <div class="modal-header">
                     <div class="modal-title"> Log In</div>
@@ -411,10 +411,9 @@ include_once("/var/www/hdsi/includes/utilities.php");
     }
 </script>
 <!-- ##### script for SignUp Modal form checks ##### -->
-<div class="modal fade" id="signupModal" role="dialog">
-    <div class="modal-dialog" role="document">
-
-        <!-- Modal content-->
+<div class="modal fade" id="signupModal" role="dialog" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <!-- ##### Modal content-->
         <div class="modal-content">
             <form enctype="multipart/form-data" method="POST" onsubmit="return validate();">
                 <div class="modal-header">
