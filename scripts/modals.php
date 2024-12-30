@@ -438,7 +438,7 @@ if (isset($_POST['submitLogIn'])) {
                 </button>
             </div>
 
-            <div class="modal-body" style="padding-bottom: 5px">
+            <div class="modal-body">
 
                 <form enctype="multipart/form-data" method="POST" onsubmit="return validate();">
 
@@ -498,11 +498,12 @@ if (isset($_POST['submitLogIn'])) {
                 </form>
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer" style="display: block; text-align: right">
                 <button type="submit" name="submitSignUp" id="submitSingUp" style="color: white"
                     class="btn"
                     value="sign up"> Sign Up
                 </button>
+                <br>
                 <button class="btn" style="float: right; background-color: #915664" value="" data-toggle="modal"
                     data-target="#loginModal"
                     data-dismiss="modal"> log in
