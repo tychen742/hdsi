@@ -73,4 +73,4 @@ if ($server_name == 'hdsinet.us') {
 
 <dody>
 
-<?php include_once('topnav.php'); ?>
+<?php include('topnav.php'); ?>
