@@ -328,7 +328,7 @@ if (isset($_POST['submitLogIn'])) {
     // ##### problem with DB
     error_log('query NOT run successfully @topnav.php', 0);
     echo "<script> showMessage('Email or password information incorrect. Please try again.<br> Contact Support if problem persists. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
-    echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
+    // echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
     exit;
 }
 
