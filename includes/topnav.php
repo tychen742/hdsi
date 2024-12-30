@@ -111,8 +111,15 @@ if (!isset($_SESSION['email_hbdi'])) {
                         Sign Up
                     </li>
                     &nbsp;
-                    <li class="nav-item" href="#" data-bss-toggle='modal' data-bs-target="#loginModal">
+                    <!-- <li class="nav-item" href="#" data-bss-toggle='modal' data-bs-target="#loginModal">
                         Log In 2
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="dropdown-item" href=""
+                            data-bs-toggle='modal'
+                            data-bs-target='#loginModal'>
+                            Log In 2
+                        </a>
                     </li>
                     &nbsp;
                     <li class="nav-item dropdown">
