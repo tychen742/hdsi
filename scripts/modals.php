@@ -411,7 +411,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
     }
 </script>
 <!-- ##### script for SignUp Modal form checks ##### -->
-<div class="modal fade" id="signupModal" role="dialog" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+<div class="modal fade" id="signupModal" role="dialog" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
     <div class="modal-dialog">
 
         <!-- Modal content-->
