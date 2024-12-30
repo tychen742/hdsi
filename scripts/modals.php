@@ -1,5 +1,4 @@
 <?php
-include_once('/var/www/hdsi/includes/headers.php');
 include_once("/var/www/hdsi/includes/utilities.php");
 //include_once("/var/www/hdsi/includes/login_loader.php"); // login_loader upsets modals
 //include_once("/var/www/hdsi/includes/topnav.php");
@@ -158,9 +157,9 @@ $root_path = '/var/www/hdsi';
                     &times;
                 </button>
             </span>
+            
         </div>
         <div class="modal-body">
-            
             <form>
                 <div class="mb-3">
                     <!--                        <label>Email address</label>-->
