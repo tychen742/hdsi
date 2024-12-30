@@ -1,6 +1,7 @@
 <?php
 
-echo "mmmm ini_get('error_log')";
+echo ini_get('error_log');
+echo "<br>";
 
 //include_once('./includes/topnav.php');
 
