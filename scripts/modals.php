@@ -512,7 +512,7 @@ if (isset($_POST['submitLogIn'])) {
                 </button>
 
                 <!-- <button class="btn" style="float: right; background-color: #915664"  -->
-                <button class="btn" style="float: right; background-color: 'red'" 
+                <button class="btn" style="float: right; background-color: #000000" 
                     data-toggle="modal"
                     data-target="#resetPwModal"
                     data-dismiss="modal"> Reset password 
