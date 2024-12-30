@@ -62,7 +62,7 @@ if (!isset($_SESSION['email_hbdi'])) {
                         <div style="color: white; text-align: left; font-size: 20px; ">
                             <a><i class="fab fa-facebook"></i></a> &nbsp;
                             <a><i class="fab fa-linkedin"></i></a> &nbsp;
-                            <a><i class="fab fa-twitter"></i></a>
+                            <a><i class="fab fa-x"></i></a>
                         </div>
                     </li>
                     <!--                    </div>-->
