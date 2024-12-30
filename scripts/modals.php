@@ -743,7 +743,8 @@ if (isset($_POST['submitLogOut'])) {
                         <div><span id="username_error"></span></div>
                     </div>
                     <div style="height: 2rem; color: #818181;
-                     padding-bottom: 1px; position: relative; left: 47%; font-size: 12px; width: 10%; top: 75%">
+                     padding-bottom: 1px; position: relative; left: 47%; font-size: 12px; width: 10%; margin-left: auto;
+  margin-right: auto;">
                         OR
                     </div>
 
