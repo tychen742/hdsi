@@ -153,11 +153,10 @@ $root_path = '/var/www/hdsi';
         <div class="modal-header">
             <h4 class="modal-title"> Log In</h4>
             <span>
-                <button type="button" class="close" data-dismiss="modal">
-                    &times;
-                </button>
-            </span>
-            
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
         </div>
         <div class="modal-body">
             <form>
