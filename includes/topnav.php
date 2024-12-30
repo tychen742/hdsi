@@ -60,8 +60,8 @@ if (!isset($_SESSION['email_hbdi'])) {
                     <!-- ##### the social media icons, the Brand, and the menu items ##### -->
                     <li class="nav-item " style="padding-left: 15px;">
                         <div style="color: white; text-align: left; font-size: 20px; ">
-                            <a><i class="fab fa-facebook"></i></a> &nbsp;
-                            <a><i class="fab fa-linkedin"></i></a> &nbsp;
+                            <a><i class="fa-brands fa-facebook"></i></a> &nbsp;
+                            <a><i class="fa-brands fa-linkedin"></i></a> &nbsp;
                             <a><i class="fa-brands fa-x-twitter"></i></a> &nbsp;
                             <a><i class="fa-brands fa-instagram"></i></a> &nbsp;
                         </div>
