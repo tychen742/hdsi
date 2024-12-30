@@ -123,3 +123,11 @@ nav {
     font-family: 'Noles_Unconquered';
     src: url('../fonts/Noles_Unconquered.otf');
 }
+
+.modal-body form div input {
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
