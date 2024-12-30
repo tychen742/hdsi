@@ -200,6 +200,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                         style="width: auto; background-color: #915664" value="">
                         Reset Password
                     </button>
+                </div>
             </form>
         </div>
         <!-- <div>
@@ -497,33 +498,30 @@ if (isset($_POST['submitLogIn'])) {
             </div>
 
             <div class="modal-footer" style="display: block; text-align: right">
-                <button type="submit" name="submitSignUp" id="submitSingUp" style="color: white"
-                    class="btn"
-                    value="sign up"> Sign Up
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <button class="btn" id="submitSingUp" data-bs-toggle="modal" type="submit" data-dismiss="modal"
+                    data-bs-target="#signupModal" name="submitSignUp"
+                    style="width: auto; background-color: #915664" value="">
+                    Sign Up
                 </button>
+
                 <br>
-                <button class="btn" style="float: right; background-color: #915664"
-                    data-toggle="modal"
-                    data-target="#loginModal"
-                    data-dismiss="modal"> log in
+
+                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                    data-bs-target="#loginModal" name="submitLogIn">
+                    Log In
                 </button>
 
-                <button class="btn" style="float: right; background-color: #915664"
-                    data-toggle="modal"
-                    data-target="#resetPwModal"
-                    data-dismiss="modal"> Reset password
-
+                <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                    data-bs-target="#resetPwModal" name="resetPwModal"
+                    style="width: auto; background-color: #915664" value="">
+                    Reset Password
                 </button>
             </div>
-            <!-- <div>
-                    Forget your password? <span style="color: #915664; font-weight: 500" data-toggle="modal"
-                        data-target="#resetPwModal"
-                        data-dismiss="modal"> Reset Password </span>
-                </div> -->
+
         </div>
+        <!-- end of modal content       -->
     </div>
-    <!-- end of modal content       -->
-</div>
 </div>
 <!-- ##### End of Sign Up signUp Modal ##### -->
 
