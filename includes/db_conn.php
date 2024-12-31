@@ -4,9 +4,10 @@ $charset = 'utf8mb4';
 $host = "localhost";
 $dbname = "hbdi";
 
-// $dbuser = "root";
-$dbuser = "hbdi";
+$dbuser = "root";
+// $dbuser = "hbdi";
 // $password = "passwd@2020";
+error_log("logging in with root");
 $password = "Redcar@@2020";
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
