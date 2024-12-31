@@ -12,7 +12,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 <div class="modal fade" id="fileModalUpload">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form id="formFileUpload" method="POST" action="https://tychen.us/hbdi/scripts/file_menu.php"
+            <form id="formFileUpload" method="POST" action="https://hbdinet.org/scripts/file_menu.php"
                 enctype="multipart/form-data">
                 <div class="modal-header">
                     <!--                    <h4 class="modal-title">Add Files </h4>-->
@@ -150,7 +150,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
         <div class="modal-content">
 
-            <form method="POST" action="db.php" name="submitLogIn">
+            <form method="POST" action="db.php">
 
                 <div class="modal-header">
                     <div class="modal-title"> Log In</div>
@@ -189,6 +189,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                         type="submit"
                         data-dismiss="modal"
                         data-bs-target="#loginModal"
+                        name="submitLogIn"
                         >
                         Log In
                     </button>

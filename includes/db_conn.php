@@ -7,7 +7,7 @@ $dbname = "hbdi";
 $dbuser = "root";
 // $dbuser = "hbdi";
 // $password = "passwd@2020";
-error_log("logging in with root");
+error_log("DB_conn: logging in with root");
 $password = "Redcar@@2020";
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
