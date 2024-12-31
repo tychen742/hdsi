@@ -6,6 +6,8 @@ if (session_status() == PHP_SESSION_NONE) {
 
 //include_once('headers.php');
 include_once('db_conn.php');
+ini_set("error_log", "~/php_errors.log");
+
 //include_once('login_loader.php');
 $server_name = $_SERVER['SERVER_NAME'];
 echo nl2br("\n {$server_name}");
