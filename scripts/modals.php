@@ -319,7 +319,7 @@ if (isset($_POST['submitLogIn'])) {
             // ##### your account is not activated.
             echo '<script> showMessage("Your account is not activated. <br> Please check your account creation confirmation email to activate. <br> Redirecting to HBDI Home in 5 seconds..."); </script>';
             error_log('Account not activated @topnav.php', 0);
-            echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
+            echo "<meta http-equiv=REFRESH CONTENT=10;url=$p>";
             exit;
         }
     } else {
