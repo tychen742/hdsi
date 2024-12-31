@@ -621,7 +621,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 <!-- ##### end of create new project modal #####   -->
 
 
-##### Login Processing for Login Modal ##### -->
+<!-- ##### Login Processing for Login Modal ##### -->
 <?php
 error_log("", 0);
 error_log("Starting DB processing @ modals.php", 0);
