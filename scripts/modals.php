@@ -311,7 +311,7 @@ if (isset($_POST['submitLogIn'])) {
                 exit;
             } else {
                 echo '<script> showMessage("Password is incorrect. <br> Redirecting to HBDI Home..."); </script>';
-                error_log('password INCorrect (topnav.php)', 0);
+                error_log('FAILED: password_verify($password_posted, $password_from_db) (modals.php)', 0);
                 echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
                 exit;
             }
