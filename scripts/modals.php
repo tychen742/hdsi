@@ -251,7 +251,7 @@ if (isset($_POST['submitLogIn'])) {
         $password_from_db = $result['password'];
         $email_from_db = $result['email'];
         $user_time_verified = $result['time_verified'];
-
+        error_log("user_time_verified: $user_time_verified", 0);
         // ##### check Account Activation #####
         if ($user_time_verified) {
             // ##### verify password #####
