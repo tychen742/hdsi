@@ -189,8 +189,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                         type="submit"
                         data-dismiss="modal"
                         data-bs-target="#loginModal"
-                        name="submitLogIn"
-                        >
+                        name="submitLogIn">
                         Log In
                     </button>
 
@@ -210,21 +209,14 @@ include_once("/var/www/hdsi/includes/utilities.php");
                 </div>
             </form>
         </div>
-
     </div>
-
 </div>
-<!-- end of class: model content        -->
-</div>
-
 <!-- ##### End of Login Modal ##### -->
 
-</div>
-<!-- ##### end of log in login processing ##### -->
 
 
 <!--  ##### beginning Sign Up SignUp Modal ##### -->
-<!-- ##### script for signUp modal ##### -->
+<!-- ##### validation script for signUp modal ##### -->
 <script>
     function validate() {
         submit = true;
@@ -313,7 +305,9 @@ include_once("/var/www/hdsi/includes/utilities.php");
         return reg.test(email);
     }
 </script>
-<!-- ##### script for SignUp Modal form checks ##### -->
+<!-- ##### end of validation script for SignUp Modal form checks ##### -->
+
+<!-- ##### signUpModal -->
 <div class="modal fade" id="signupModal" role="dialog" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
     <div class="modal-dialog">
 
@@ -532,8 +526,6 @@ include_once("/var/www/hdsi/includes/utilities.php");
             </form>
         </div>
     </div>
-</div>
-<!-- end of passwordReset modal content       -->
 </div>
 <!-- ##### End of Reset Password Reset Modal ##### -->
 

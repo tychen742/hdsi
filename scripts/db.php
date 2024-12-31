@@ -111,6 +111,7 @@ if (isset($_POST['submitLogIn'])) {
     }
 }
 ?>
+<!-- ##### end of log in login processing ##### -->
 
 
 <!-- ##### Sing Up SignUP Modal Processing ##### -->
