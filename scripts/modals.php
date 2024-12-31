@@ -180,21 +180,26 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
                 <div class="modal-footer" style="display: block; text-align: right">
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                    <button class="btn" data-bs-toggle="modal" type="input" data-dismiss="modal"
-                        data-bs-target="#loginModal" name="submitLogIn">
+                    <button
+                        class="btn"
+                        data-bs-toggle="modal"
+                        type="submit"
+                        data-dismiss="modal"
+                        data-bs-target="#loginModal"
+                        name="submitLogIn">
                         Log In
                     </button>
 
                     <br>
 
                     <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                        data-bs-target="#signupModal" 
+                        data-bs-target="#signupModal"
                         style="width: auto; background-color: #915664" value="">
                         Sign Up
                     </button>
 
                     <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                        data-bs-target="#resetPwModal" 
+                        data-bs-target="#resetPwModal"
                         style="width: auto; background-color: #915664" value="">
                         Reset Password
                     </button>
