@@ -312,16 +312,16 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
         <div class="modal-content">
 
-            <div class="modal-header">
-                <div class="modal-title"> Sign Up </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"></span>
-                </button>
-            </div>
+            <form enctype="multipart/form-data" method="POST" action="" onsubmit="return validate();">
+                <div class="modal-header">
+                    <div class="modal-title"> Sign Up </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
 
-            <div class="modal-body">
+                <div class="modal-body">
 
-                <form enctype="multipart/form-data" method="POST" action="" onsubmit="return validate();">
 
                     <div class="form-group">
                         <input type="text" name="name_first" id="name_first"
@@ -376,46 +376,44 @@ include_once("/var/www/hdsi/includes/utilities.php");
                             <span id="affiliation_error" class="signUpError"> </span>
                         </div>
                     </div>
-                </form>
-            </div>
+                </div>
 
-            <div class="modal-footer" style="display: block; text-align: right">
-                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                <!-- data-bs-target="#signupModal" -->
-                <button class="btn"
-                    id="submitSignUp"
-                    type="submit"
-                    name="submitSignUp"
-                    data-bs-toggle="modal"
-                    data-dismiss="modal"
-                    >
-                    Sign Up
-                </button>
+                <div class="modal-footer" style="display: block; text-align: right">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                    <!-- data-bs-target="#signupModal" -->
+                    <button class="btn"
+                        id="submitSignUp"
+                        type="submit"
+                        name="submitSignUp"
+                        data-bs-toggle="modal"
+                        data-dismiss="modal">
+                        Sign Up
+                    </button>
 
-                <br>
+                    <br>
 
-                <button class="btn"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-dismiss="modal"
-                    data-bs-target="#loginModal"
-                    style="width: auto; background-color: #915664" value="">
-                    Log In
-                </button>
+                    <button class="btn"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        data-bs-target="#loginModal"
+                        style="width: auto; background-color: #915664" value="">
+                        Log In
+                    </button>
 
-                <button class="btn"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-dismiss="modal"
-                    data-bs-target="#resetPwModal"
-                    style="width: auto; background-color: #915664" value="">
-                    Reset Password
-                </button>
-            </div>
-
+                    <button class="btn"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        data-bs-target="#resetPwModal"
+                        style="width: auto; background-color: #915664" value="">
+                        Reset Password
+                    </button>
+            </form>
         </div>
         <!-- end of modal content       -->
     </div>
+</div>
 </div>
 <!-- ##### End of Sign Up signUp Modal ##### -->
 
