@@ -103,9 +103,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                     }
                     /*unset($id_project);*/
                     ?>
-
-                    <!-- <input type="hidden" name="title_project_short" id="title_project_short" value="<?php //echo $title_project_short; 
-                                                                                                            ?>"> -->
+                    
                     <input type="hidden" name="username_hbdi" id="username_hbdi" value="<?php echo $username_hbdi; ?>">
                 </div>
                 <div class="modal-footer">
