@@ -150,7 +150,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
         <div class="modal-content">
 
-            <form method="POST">
+            <form method="POST" action="db.php">
 
                 <div class="modal-header">
                     <div class="modal-title"> Log In</div>
@@ -217,119 +217,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 </div>
 
 <!-- ##### End of Login Modal ##### -->
-<!-- ##### Login Processing for Login Modal ##### -->
-<?php
-//error_log("Before login processing @topnav.php", 0);
 
-
-if (isset($_POST['submitLogIn'])) {
-    error_log("Login submitted @topnav.php... ", 0);
-
-    // ##### save POSTed email and password to variables #####
-    if (isset($_POST['email'])) {
-        $email_posted = $_POST['email'];
-        error_log('email posted to @topnav.php for login modal processing', 0);
-    } else {
-        error_log('email not posted to @topnav.php for login modal processing', 0);
-    }
-    if (isset($_POST['password'])) {
-        $password_posted = $_POST['password'];
-        //        error_log("password posted to @topnav.php for login modal processing: $password_posted", 0);
-        error_log("password posted to @topnav.php for login modal processing", 0);
-    } else {
-        error_log("password not posted to @topnav.php for login modal processing", 0);
-    }
-    //        $password = password_hash($password, PASSWORD_DEFAULT);
-
-    // ##### get User info and check account Activation from DB.user #####
-    // $stmt = $pdo->prepare("SELECT password, email, username, id_user, time_verified FROM user WHERE email = '$email_posted' ");
-    $stmt = $pdo->prepare("SELECT password, email, username, id_user, time_verified FROM user WHERE email = '$email_posted' ");
-    $stmt->execute();
-    $result = $stmt->fetch();
-    if ($result) {
-        error_log('query ran successfully @topnav.php', 0);
-        $password_from_db = $result['password'];
-        $email_from_db = $result['email'];
-        $user_time_verified = $result['time_verified'];
-        // ##### check Account Activation #####
-        if ($user_time_verified) {
-            error_log("user_time_verified: $user_time_verified", 0);
-            // ##### verify password #####
-            $isValid = password_verify($password_posted, $password_from_db);
-            if ($isValid) {
-                // ##### Create SESSIONS ##### //{
-                error_log("Password is a match", 0);
-                $_SESSION['email_hbdi'] = $result['email'];
-                $_SESSION['username_hbdi'] = $result['username'];
-                $_SESSION['uid_hbdi'] = $result['id_user'];
-                error_log("Sessions created @ topnav.php ");
-
-                // TODO: what is this?
-                $uid_hdsi = $_SESSION['uid_hbdi'] = $result['id_user'];
-                //                $time_login = time();
-                //                $datetime_login = date('Y-m-d H:i:s', $time_login);
-
-                // ##### get and insert HTTP_USER_AGENT
-                $http_user_agent = $_SERVER['HTTP_USER_AGENT'];
-                $result = $pdo->query(" SELECT id_user, http_user_agent FROM location WHERE http_user_agent = '$http_user_agent'")->fetchAll();
-
-                $location_exist = false;
-                foreach ($result as $record) {
-                    if (($record['id_user'] == $uid_hdsi) && ($record['http_user_agent'] == $http_user_agent)) {
-                        $location_exist = true;
-                    }
-                }
-
-                if (($location_exist != true)) {
-                    $msg = " This a new device/browser for this account. Saving as new location...";
-                    echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
-                    error_log("echo \"<script> setTimeout(showMessage(' $msg '), 5000); </script>\"", 0);
-                    // TODO: create a modal for user to agree to register this device.
-
-                    $ip = new Get_IP_Address();
-                    $ip_address = $ip->getRealIpAddr();
-
-                    $stmt = $pdo->prepare(" INSERT INTO location (id_user, ip_address, http_user_agent) VALUES (?, ?, ?) ");
-                    $stmt->execute([$uid_hdsi, $ip_address, $http_user_agent]);
-                } else {
-                    $msg = " This device/browser for this account has been verified. ";
-                    echo "<script> setTimeout(showMessage('$msg'), 5000); </script>";
-                }
-                // ##### end of get and insert HTTP_USER_AGENT
-
-                // ##### login record in transaction_store records #####
-                //                $time_login = date('Y-m-d H:i:s', time());
-
-                $ip = new Get_IP_Address();
-                $ip_address = $ip->getRealIpAddr();
-
-                $stmt = $pdo->prepare(" INSERT INTO transaction_store (id_user, ip_address, login) VALUES (?, ?, ?) ");
-                $stmt->execute([$uid_hdsi, $ip_address, 1]);
-                echo '<script> showMessage("Login successful. <br> Redirecting to your Dashboard..."); </script>';
-                echo "<meta http-equiv=REFRESH CONTENT=2;url=$p/dashboard.php>";
-                unset($_POST['submitLogIn']);
-                exit;
-            } else {
-                echo '<script> showMessage("Password is incorrect. <br> Redirecting to HBDI Home..."); </script>';
-                error_log('FAILED: password_verify($password_posted, $password_from_db) (modals.php)', 0);
-                echo "<meta http-equiv=REFRESH CONTENT=3;url=$p>";
-                exit;
-            }
-        } else {
-            // ##### your account is not activated.
-            echo '<script> showMessage("Your account is not activated. <br> Please check your account creation confirmation email to activate. <br> Redirecting to HBDI Home in 5 seconds..."); </script>';
-            error_log('Account not activated @topnav.php', 0);
-            echo "<meta http-equiv=REFRESH CONTENT=10;url=$p>";
-            exit;
-        }
-    } else {
-        // ##### problem with DB
-        error_log('query NOT run successfully @topnav.php', 0);
-        echo "<script> showMessage('Email or password information incorrect. Please try again.<br> Contact Support if problem persists. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
-        exit;
-    }
-}
-?>
 </div>
 <!-- ##### end of log in login processing ##### -->
 
