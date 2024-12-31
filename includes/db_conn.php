@@ -19,7 +19,7 @@ try {
     $pdo = new PDO($dsn, $dbuser, $password, $options);
     echo "DB Connection Successful";
 } catch (PDOException $e) {
-    throw new PDOException($e->getMessage(), (int)$e->getCode());
+    // throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 
 //prevent SQL Injection
