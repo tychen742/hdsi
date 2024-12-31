@@ -383,18 +383,19 @@ include_once("/var/www/hdsi/includes/utilities.php");
                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
                 <button class="btn"
                     id="submitSingUp"
-                    data-bs-toggle="modal"
                     type="submit"
+                    name="submitSignUp">
+                    data-bs-toggle="modal"
                     data-dismiss="modal"
-                    data-bs-target="#signupModal" name="submitSignUp">
+                    data-bs-target="#signupModal"
                     Sign Up
                 </button>
 
                 <br>
 
                 <button class="btn"
-                    data-bs-toggle="modal"
                     type="button"
+                    data-bs-toggle="modal"
                     data-bs-dismiss="modal"
                     data-bs-target="#loginModal"
                     style="width: auto; background-color: #915664" value="">
@@ -402,8 +403,8 @@ include_once("/var/www/hdsi/includes/utilities.php");
                 </button>
 
                 <button class="btn"
-                    data-bs-toggle="modal"
                     type="button"
+                    data-bs-toggle="modal"
                     data-bs-dismiss="modal"
                     data-bs-target="#resetPwModal"
                     style="width: auto; background-color: #915664" value="">
@@ -742,8 +743,8 @@ if (isset($_POST['submitLogIn'])) {
 if (isset($_POST['submitSignUp'])) {  //  working.
 
     echo "TTTTTTTTTTTTTTTT";
+    error_log("signUp POSTed @ modals.php signUp modal", 0);
 
-    error_log("signUp POSTed @topnav signUp modal", 0);
     $name_first = $name_last = $username = $email = $password1 = $password2 = $affiliation = "";
 
     //    function test_input($data) // needed before called
