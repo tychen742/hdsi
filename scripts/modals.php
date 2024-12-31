@@ -381,13 +381,14 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
             <div class="modal-footer" style="display: block; text-align: right">
                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <!-- data-bs-target="#signupModal" -->
                 <button class="btn"
                     id="submitSingUp"
                     type="submit"
-                    name="submitSignUp">
+                    name="submitSignUp"
                     data-bs-toggle="modal"
                     data-dismiss="modal"
-                    data-bs-target="#signupModal"
+                    >
                     Sign Up
                 </button>
 
