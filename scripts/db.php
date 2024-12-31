@@ -1,5 +1,7 @@
-<!-- ##### Login Processing for Login Modal ##### -->
 <?php
+include_once('../includes/db_conn.php');
+
+##### Login Processing for Login Modal ##### -->
 error_log("", 0);
 error_log("Starting DB processing @db.php", 0);
 
