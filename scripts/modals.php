@@ -161,7 +161,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="recipient-email" class="col-form-label"></label> 
+                        <label for="recipient-email" class="col-form-label"></label>
                         <input type="text"
                             class="form-control"
                             id="recipient-email"
@@ -171,13 +171,13 @@ include_once("/var/www/hdsi/includes/utilities.php");
                     </div>
 
                     <div class="mb-3">
-                        <label for="recipient-password" class="col-form-label"></label> 
+                        <label for="recipient-password" class="col-form-label"></label>
                         <input type="text"
                             class="form-control"
                             id="recipient-password"
                             placeholder="password"
                             name="password">
-                        
+
                     </div>
                 </div>
 
@@ -251,7 +251,6 @@ if (isset($_POST['submitLogIn'])) {
         $password_from_db = $result['password'];
         $email_from_db = $result['email'];
         $user_time_verified = $result['time_verified'];
-        error_log("user_time_verified: $user_time_verified", 0);
         // ##### check Account Activation #####
         if ($user_time_verified) {
             error_log("user_time_verified: $user_time_verified", 0);
@@ -327,8 +326,6 @@ if (isset($_POST['submitLogIn'])) {
         // ##### problem with DB
         error_log('query NOT run successfully @topnav.php', 0);
         echo "<script> showMessage('Email or password information incorrect. Please try again.<br> Contact Support if problem persists. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
-        echo "<meta http-equiv=REFRESH CONTENT=3;url=$p/index.php>";
-        echo "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
         exit;
     }
 }
