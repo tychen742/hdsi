@@ -3,7 +3,6 @@
 </head>
 <?php
 include_once("./includes/headers.php");
-include_once("./includes/topnav.php");
 
 ini_set("error_log", "~/php_errors.log");
 $_SESSION['document_root'] = __DIR__;
