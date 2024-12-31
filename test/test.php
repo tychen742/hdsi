@@ -1,5 +1,7 @@
 <?php
-
+ $time_verified = time();
+ $time_verified = date('Y-m-d H:i:s', $time_verified);
+    echo "The time_verified is: " . $time_verified . "<br>";
 ini_get('error_log');
 echo "<br>";
 
