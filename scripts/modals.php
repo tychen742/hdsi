@@ -147,10 +147,9 @@ include_once("/var/www/hdsi/includes/utilities.php");
 <!-- TODO: solved. it's requiring double log-in to log into the system. Why??? -->
 <div class="modal fade" id="loginModal" role="dialog" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
     <div class="modal-dialog">
-
         <div class="modal-content">
 
-            <form method="POST" action="db.php">
+            <form method="POST" action="./db.php">
 
                 <div class="modal-header">
                     <div class="modal-title"> Log In</div>
