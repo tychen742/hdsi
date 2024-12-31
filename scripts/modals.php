@@ -161,7 +161,8 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="recipient-email" class="col-form-label"></label> <input type="text"
+                        <label for="recipient-email" class="col-form-label"></label> 
+                        <input type="text"
                             class="form-control"
                             id="recipient-email"
                             placeholder="email"
@@ -170,11 +171,13 @@ include_once("/var/www/hdsi/includes/utilities.php");
                     </div>
 
                     <div class="mb-3">
-                        <label for="recipient-password" class="col-form-label"></label> <input type="text"
+                        <label for="recipient-password" class="col-form-label"></label> 
+                        <input type="text"
                             class="form-control"
                             id="recipient-password"
-                            placeholder="password">
-                        <!--                            <input type="password" placeholder="password" name="password" class="form-control">-->
+                            placeholder="password"
+                            name="password">
+                        
                     </div>
                 </div>
 
