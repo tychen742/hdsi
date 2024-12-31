@@ -243,7 +243,7 @@ if (isset($_POST['submitLogIn'])) {
 
     // ##### get User info and check account Activation from DB.user #####
     // $stmt = $pdo->prepare("SELECT password, email, username, id_user, time_verified FROM user WHERE email = '$email_posted' ");
-    $stmt = $pdo->prepare("SELECT password, email, username, id_user FROM user WHERE email = '$email_posted' ");
+    $stmt = $pdo->prepare("SELECT password, email, username, id_user, time_verified FROM user WHERE email = '$email_posted' ");
     $stmt->execute();
     $result = $stmt->fetch();
     if ($result) {
