@@ -149,7 +149,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
     <div class="modal-dialog">
         <div class="modal-content">
 
-            <form method="POST" action="<?php echo $p ?>/scripts/db.php">
+            <form method="POST" action="<?php echo $p ?>scripts/db.php">
 
                 <div class="modal-header">
                     <div class="modal-title"> Log In</div>
