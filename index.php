@@ -1,12 +1,11 @@
+<?php
+include_once("./includes/headers.php");
+$_SESSION['document_root'] = __DIR__;
+?>
+
 <head>
     <script src="./scripts/tweetjs.js"></script>
 </head>
-<?php
-include_once("./includes/headers.php");
-
-$_SESSION['document_root'] = __DIR__;
-
-?>
 
 
 <!-- ### just a white space divider ### -->
