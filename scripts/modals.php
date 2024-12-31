@@ -103,7 +103,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                     }
                     /*unset($id_project);*/
                     ?>
-                    
+
                     <input type="hidden" name="username_hbdi" id="username_hbdi" value="<?php echo $username_hbdi; ?>">
                 </div>
                 <div class="modal-footer">
@@ -180,7 +180,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
 
                 <div class="modal-footer" style="display: block; text-align: right">
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                    <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
+                    <button class="btn" data-bs-toggle="modal" type="input" data-dismiss="modal"
                         data-bs-target="#loginModal" name="submitLogIn">
                         Log In
                     </button>
@@ -188,13 +188,13 @@ include_once("/var/www/hdsi/includes/utilities.php");
                     <br>
 
                     <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                        data-bs-target="#signupModal" name="submitSignUp"
+                        data-bs-target="#signupModal" 
                         style="width: auto; background-color: #915664" value="">
                         Sign Up
                     </button>
 
                     <button class="btn" data-bs-toggle="modal" type="button" data-dismiss="modal"
-                        data-bs-target="#resetPwModal" name="resetPwModal"
+                        data-bs-target="#resetPwModal" 
                         style="width: auto; background-color: #915664" value="">
                         Reset Password
                     </button>
