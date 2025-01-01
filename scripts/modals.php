@@ -815,11 +815,11 @@ if (isset($_POST['submitSignUp'])) {  //  working.
             echo "<script> showMessage('Recording user data and generating verification email...'); </script>";
 
             $user_time_registered = date('Y-m-d H:i:s', time());
-            //            keep registered instead of changing to signup because of the tense.
+            // keep registered instead of changing to signup because of the tense.
 
-            $sql = "INSERT INTO user (email, password, username, name_first, name_last, affiliation, account_verify_token, time_registered ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO user (email, password, username, name_first, name_last, affiliation, account_verify_token ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([$email, $pass_hash, $username, $name_first, $name_last, $affiliation, $account_verify_token, $user_time_registered]);
+            $stmt->execute([$email, $pass_hash, $username, $name_first, $name_last, $affiliation, $account_verify_token,]);
             error_log("user account information inserted @ modals.php", 0);
         } catch (PDOException $e) {
             error_log("user account information not inserted @ modals.php", 0);
