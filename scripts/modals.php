@@ -821,18 +821,22 @@ if (isset($_POST['submitSignUp'])) {  //  working.
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$email, $pass_hash, $username, $name_first, $name_last, $affiliation, $account_verify_token, $user_time_registered]);
             error_log("user account information inserted @ modals.php", 0);
+        } catch (PDOException $e) {
+            error_log("user account information not inserted @ modals.php", 0);
+            echo $e->getMessage();
+        }
 
+        try {
             // ##### send email with token link #####
             $link = "<a href='$p/user/account_verify.php?key=" . $email . "&verify=" . $account_verify_token . "'> Click HERE to confirm your HBDI account creation</a>";
             // ### http://talkerscode.com/webtricks/password-reset-system-using-php.php
-            try {
-                // ### the headers: https://stackoverflow.com/questions/28026932/php-warning-mail-sendmail-from-not-set-in-php-ini-or-custom-from-head
-                $headers = 'MIME-Version: 1.0' . "\r\n";
-                $headers .= 'From: support@hbdi<support@hbdi.fsu.edu>' . "\r\n";
-                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+            // ### the headers: https://stackoverflow.com/questions/28026932/php-warning-mail-sendmail-from-not-set-in-php-ini-or-custom-from-head
+            $headers = 'MIME-Version: 1.0' . "\r\n";
+            $headers .= 'From: support@hbdi<support@tychen.org>' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-                // ### the message ###
-                $msg = "
+            // ### the message ###
+            $msg = "
 ***** DO NOT reply to this email. ***** <br>
 This is an automatically generated email. Contact the Support Team through the website for support. <br><br>
 Please click on the link to verify your new HBDI account creation: $link. <br>
@@ -842,30 +846,31 @@ to the address bar of your browser and hit enter to process your HBDI sign-up:<b
 $p/user/account_verify.php?key=$email&verify=$account_verify_token
 ";
 
-                // ### use wordwrap() if lines are longer than 70 characters
-                $msg = wordwrap($msg, 70);
-                // ### send email
-                mail("$email", "HBDI: Account Creation Verification", "$msg", "$headers");
-                // ### message user
+            // ### use wordwrap() if lines are longer than 70 characters
+            $msg = wordwrap($msg, 70);
+            // ### send email
+            mail("$email", "HBDI: Account Creation Verification", "$msg", "$headers");
+            // ### message user
 
-                echo "<script> showMessage('A verification email from support@hbdi is sent to $email. <br> Use the email to verify your account creation. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
-                echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
-                exit();
-                // ### send email exception
-            } catch (Exception $emailException) {
-                echo $emailException;
-            }
-
+            echo "<script> showMessage('A verification email from support@hbdi is sent to $email. <br> Use the email to verify your account creation. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
+            echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
+            exit();
+        } catch (Exception $emailException) {
+            // ### send email exception
+            echo $emailException;
+        }
+        try {
             echo "<meta http-equiv=REFRESH CONTENT=5;url=$p/index.php>";
             error_log("the web path here is: $p", 0);
             exit();
-            // ### insert user account information exception
         } catch (PDOException $e) {
-            echo "<script> showMessage('Something went wrong and your account was not created. Please try again. The error message is: <br> + $e->getMessage(). <br> Contact the support team if the issue persists. ');
-                        </script>";
-            echo "<meta http-equiv=REFRESH CONTENT=5;url=$p>";
-            exit();
+            // ### insert user account information exception
+            echo $e->getMessage();
         }
+        echo "<script> showMessage('Something went wrong and your account was not created. Please try again. The error message is: <br> + $e->getMessage(). <br> Contact the support team if the issue persists. ');
+                        </script>";
+        echo "<meta http-equiv=REFRESH CONTENT=5;url=$p>";
+        exit();
         //    }
         //        }
         //    } catch (Exception $e) {
