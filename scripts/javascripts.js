@@ -3,7 +3,7 @@ function showMessage(text) {
     document.getElementById("php-message").style.display = "block";
     setTimeout(function () {
         document.getElementById("php-message").innerHTML = text;
-}, 10000); // 10 seconds  
+}, 5000); // 5 seconds  
 }
 
 // <!-- ### end of php-message javascript ### -->
