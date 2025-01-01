@@ -858,8 +858,7 @@ $p/user/account_verify.php?key=$email&verify=$account_verify_token
             exit();
             // ### insert user account information exception
         } catch (PDOException $e) {
-            echo "<script> 
-showMessage('Something went wrong and your account was not created. Please try again. The error message is: <br> + $e->getMessage(). <br> Contact the support team if the issue persists. ');
+            echo "<script> showMessage('Something went wrong and your account was not created. Please try again. The error message is: <br> + $e->getMessage(). <br> Contact the support team if the issue persists. ');
                         </script>";
             echo "<meta http-equiv=REFRESH CONTENT=10;url=$p>";
             exit();
