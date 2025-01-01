@@ -819,7 +819,7 @@ if (isset($_POST['submitSignUp'])) {  //  working.
 
             $sql = "INSERT INTO user (email, password, username, name_first, name_last, affiliation, account_verify_token ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([$email, $pass_hash, $username, $name_first, $name_last, $affiliation, $account_verify_token,]);
+            $stmt->execute([$email, $pass_hash, $username, $name_first, $name_last, $affiliation, $account_verify_token]);
             error_log("user account information inserted @ modals.php", 0);
         } catch (PDOException $e) {
             error_log("user account information not inserted @ modals.php", 0);
