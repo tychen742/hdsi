@@ -820,6 +820,7 @@ if (isset($_POST['submitSignUp'])) {  //  working.
             $sql = "INSERT INTO user (email, password, username, name_first, name_last, affiliation, account_verify_token, time_registered ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$email, $pass_hash, $username, $name_first, $name_last, $affiliation, $account_verify_token, $user_time_registered]);
+            error_log("user account information inserted @ modals.php", 0);
 
             // ##### send email with token link #####
             $link = "<a href='$p/user/account_verify.php?key=" . $email . "&verify=" . $account_verify_token . "'> Click HERE to confirm your HBDI account creation</a>";
