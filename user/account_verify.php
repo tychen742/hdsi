@@ -1,4 +1,6 @@
-<?php include "../includes/topnav.php";
+<?php 
+include "../includes/topnav.php";
+include_once "../includes/headers.php";
 
 $this_page = $_SERVER['PHP_SELF'];
 error_log("this-page @account_verify.php is: $this_page", 0);

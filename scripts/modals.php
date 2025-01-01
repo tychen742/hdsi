@@ -849,7 +849,7 @@ $p/user/account_verify.php?key=$email&verify=$account_verify_token
             // ### use wordwrap() if lines are longer than 70 characters
             $msg = wordwrap($msg, 70);
             // ### send email
-            mail("$email", "HBDI: Account Creation Verification", "$msg", "$headers");
+            mail("$email", "HDSI: Account Creation Verification", "$msg", "$headers");
             // ### message user
 
             echo "<script> showMessage('A verification email from support@hbdi is sent to $email. <br> Use the email to verify your account creation. <br> Redirecting to HBDI Home in 5 seconds...'); </script>";
