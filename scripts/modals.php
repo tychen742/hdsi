@@ -742,6 +742,7 @@ if (isset($_POST['submitLogIn'])) {
 if (isset($_POST['submitSignUp'])) {  //  working.
 
     echo "TTTTTTTTTTTTTTTT";
+    error_log("---------------------------------------", 0);
     error_log("signUp POSTed @ modals.php signUp modal", 0);
 
     $name_first = $name_last = $username = $email = $password1 = $password2 = $affiliation = "";
@@ -807,9 +808,10 @@ if (isset($_POST['submitSignUp'])) {  //  working.
         echo "<meta http-equiv=REFRESH CONTENT=10;url=$p/index.php>";
         exit();
     } else {
-        error_log("Email address and username are available @topnav.php", 0);
+        error_log("Email address and username are available @ modals.php", 0);
         // ### insert user account information
         try {
+            error_log("Inserting user account information @ modals.php", 0);
             echo "<script> showMessage('Recording user data and generating verification email...'); </script>";
 
             $user_time_registered = date('Y-m-d H:i:s', time());
