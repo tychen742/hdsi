@@ -797,7 +797,7 @@ if (isset($_POST['submitSignUp'])) {  //  working.
     $email_db = $result['email'];
     $username_db = $result['username'];
     if (!empty($email_db)) {
-        error_log("Email address taken @topnav.php", 0);
+        error_log("Email address taken @ modals.php", 0);
         echo "<script> showMessage('This email address is associated with an existing account. <br> Reset the password if this is your email address or <br> sign up using a different email address. <br> Redirecting to HDSI Home in 10 seconds...'); </script>";
         echo "<meta http-equiv=REFRESH CONTENT=10;url=$p/index.php>";
         exit();
@@ -807,7 +807,7 @@ if (isset($_POST['submitSignUp'])) {  //  working.
         echo "<meta http-equiv=REFRESH CONTENT=10;url=$p/index.php>";
         exit();
     } else {
-
+        error_log("Email address and username are available @topnav.php", 0);
         // ### insert user account information
         try {
             echo "<script> showMessage('Recording user data and generating verification email...'); </script>";
