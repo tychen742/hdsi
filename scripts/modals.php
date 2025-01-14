@@ -166,7 +166,7 @@ include_once("/var/www/hdsi/includes/utilities.php");
                             id="recipient-email"
                             placeholder="email"
                             name="email">
-                        <small class="form-text text-muted"> We keep your information private. </small>
+                        <!-- <small class="form-text text-muted"> We keep your information private. </small> -->
                     </div>
 
                     <div class="mb-3">
