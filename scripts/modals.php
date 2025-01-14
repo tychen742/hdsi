@@ -176,7 +176,6 @@ include_once("/var/www/hdsi/includes/utilities.php");
                             id="recipient-password"
                             placeholder="password"
                             name="password">
-
                     </div>
                 </div>
 
@@ -330,46 +329,46 @@ include_once("/var/www/hdsi/includes/utilities.php");
                         <div>
                             <div id="name_first_error" class="signUpError"></div>
                         </div>
-                        <!-- </div> -->
+                        </div>
 
-                        <!-- <div class="form-group"> -->
+                        <div class="form-group">
                         <input type="text" name="name_last" id="name_last"
                             placeholder="last name"
                             class="form-control">
                         <div>
                             <div id="name_last_error" class="signUpError"></div>
                         </div>
-                        <!-- </div> -->
+                        </div>
 
-                        <!-- <div class="form-group"> -->
+                        <div class="form-group">
                         <input type="text" name="username" id="username"
                             placeholder="username"
                             class="form-control">
                         <div><span id="username_error" class="signUpError"></span></div>
-                        <!-- </div> -->
+                        </div>
 
-                        <!-- <div class="form-group"> -->
+                        <div class="form-group">
                         <input type="text" name="email" id="email"
                             placeholder="email address"
                             class="form-control">
                         <div><span id="email_error" class="signUpError"></span></div>
-                        <!-- </div> -->
+                        </div>
 
-                        <!-- <div class="form-group"> -->
+                        <div class="form-group">
                         <input type="text" name="password1" id="password1"
                             placeholder="password"
                             class="form-control">
                         <div><span id="password1_error" class="signUpError"></span></div>
-                        <!-- </div> -->
+                        </div>
 
-                        <!-- <div class="form-group"> -->
+                        <div class="form-group">
                         <input type="text" name="password2" id="password2"
                             placeholder="password again" class="form-control">
                         <div><span id="password2_error" class="signUpError"></span></div>
                         <div><span id="password_match_error" class="signUpError"></span></div>
-                        <!-- </div> -->
+                        </div>
 
-                        <!-- <div class="form-group"> -->
+                        <div class="form-group">
                         <input class="form-control" type="text" name="affiliation" id="affiliation"
                             placeholder="affiliation">
                         <div>
