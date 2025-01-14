@@ -4,7 +4,6 @@ if (session_status() == PHP_SESSION_NONE) {
     ini_set("error_log", "~/php_errors.log");
 }
 
-//include_once('headers.php');
 include_once('db_conn.php');
 // ini_set("error_log", "~/php_errors.log");
 

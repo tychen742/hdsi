@@ -9,7 +9,7 @@ include("./includes/includes.php");
     <!-- header-->
     <section
             style="position: relative; text-align: center; width: 100%; border: solid 1px ">
-        <h2> Health Big Data Iniative </h2>
+        <h2> Health Big Data Initiative </h2>
         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </h4>
     </section>
 
