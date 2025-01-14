@@ -40,7 +40,6 @@ if (isset($_SESSION['uid_hbdi'])) {
 
 ##### not signed in #####
 if (!isset($_SESSION['email_hbdi'])) {
-    echo "NOT logged in";
 ?>
 
     <!--        ##### topnav wrapper #####-->
